@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link href="./css/common_re.css" rel="stylesheet"><!-- 템플릿 사이트 common -->
+	<link href="./css/layout.css" rel="stylesheet">
+	<link href="./css/swiper.min.css" rel="stylesheet">
+	<link href="./css/style.css" rel="stylesheet">
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script src="./js/dynamicListener.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/front.js"></script>
+	<title></title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap">
+		<!-- header -->
+		<header class="header_wrap">
+			<a href="javascript:;" class="btn_hdtotal">
+				<span class="btn_hdtotal_in"></span>
+			</a>
+			<h1 class="toplogo">
+				<a href="#" class="toplogo_link"><img src="./images/common/toplogo.jpg" alt=""></a>
+			</h1>
+			<a href="javascript:;" class="btn_hdsearch"></a>
+			<!-- mobile menu -->
+			<div class="mobile_mainmenu_zone">
+				<div class="mainmenu_dim"></div>
+				<div class="mobile_mainmenu_wrap">
+					<div class="mbutil_low">
+						<!-- 로그인 전 -->
+						<ul class="mbutil_hlist">
+							<li>
+								<a href="#" class="mbutil">로그인</a>
+							</li>
+							<li>
+								<a href="#" class="mbutil">회원가입</a>
+							</li>
+						</ul>
+						<!-- // 로그인 전 -->
+						<!-- 로그인 후 -->
+						<!-- <div class="mblog_after_w">
+                <p class="mblog_after_text"><span class="mblog_sym">홍길동</span>님 환영합니다.</p>
+                </div> -->
+						<!-- // 로그인 후 -->
+					</div>
+					<div class="mbmenu_low">
+						<div class="mbmenu_inwrap">
+							<ul class="mbmenu_vlist">
+								<li><a href="#" class="mbmenu_one">남미</a></li>
+								<li><a href="#" class="mbmenu_one">중미</a></li>
+								<li><a href="#" class="mbmenu_one">아프리카</a></li>
+								<li><a href="#" class="mbmenu_one">유럽</a></li>
+								<li><a href="#" class="mbmenu_one">중동/코카서스</a></li>
+								<li><a href="#" class="mbmenu_one">특별기획</a></li>
+							</ul>
+						</div>
+					</div>
+					<a href="#" class="btn_mbmenuclose">
+						<span class="hdtext">메인메뉴 닫기</span>
+					</a>
+				</div>
+			</div>
+			<!-- // mobile menu -->
+		</header>
+		<!-- // header -->
+		<!-- middle -->
+		<section class="middle_wrap">
+			<div class="flow_notice_row">
+				<div class="flow_notice_fxwrap">
+					<div class="flow_notice_ico"></div>
+					<div class="flow_notice_get_data">
+						<div class="swiper-container flow_container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><a href="#" class="flow_text_link">11월 남미/아프리카 여행 설명회 안내11월 남미/아프리카 여행 설명회 안내</a></div>
+								<div class="swiper-slide"><a href="#" class="flow_text_link">11월 남미/아프리카 여행 설명회 안내11월 남미/아프리카 여행 설명회 안내</a></div>
+								<div class="swiper-slide"><a href="#" class="flow_text_link">11월 남미/아프리카 여행 설명회 안내11월 남미/아프리카 여행 설명회 안내</a></div>
+								<div class="swiper-slide"><a href="#" class="flow_text_link">11월 남미/아프리카 여행 설명회 안내11월 남미/아프리카 여행 설명회 안내</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- visual -->
+			<div class="mv_wrap">
+				<div class="swiper-container main_visual_container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#" class="main_visual_banner"><img src="./images/main_visual_01.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="main_visual_banner"><img src="./images/main_visual_02.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="main_visual_banner"><img src="./images/main_visual_03.jpg" alt=""></a>
+						</div>
+					</div>
+				</div>
+				<div class="mv_control_paging_wrap">
+					<div class="mv_control_paging">
+
+					</div>
+				</div>
+				<div class="mv_layer">
+					<a href="#" class="mv_paging_link">
+						<span class="mv_paging_current">1</span>
+						<span class="mv_paging_part">/</span>
+						<span class="mv_paging_length"></span>
+						<span class="mv_paging_more_icon">+</span>
+					</a>
+				</div>
+			</div>
+			<!-- // visual -->
+			<script>
+				mainVisual();
+			</script>
+			<div class="sub_content_wrap">
+				<div class="sub_cont_btns">
+					<a href="#" class="btn_flex_item">
+						<span class="ico_time"></span>
+						<span class="btn_flex_main_text">지역별 실시간 출발현황</span>
+						<span class="ico_allow"></span>
+					</a>
+				</div>
+				<div class="sub_cont_empzone">
+					<div class="sub_cont_emp_title">지역별 추천여행</div>
+					<div class="sub_cont_emp_content">
+						<div class="list_thum_obj">
+							<a href="#" class="list_thum_img_row"><img src="./images/temp_638x252_2.jpg" alt=""></a>
+							<div class="list_thum_spec_row">
+								<a href="#" class="list_thum_spec_group">
+									<div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+									<div class="list_thum_spec_dl">
+										<span class="list_thum_spec_dt">최저가격</span>
+										<span class="list_thum_spec_dd">3,490,000원~</span>
+									</div>
+								</a>
+								<div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sub_cont_listzone">
+					<div class="sort_boxtab_fxzone">
+						<div class="sort_boxtab_fxwrap">
+							<a href="javascript:;" class="sort_boxtab active">리얼어드밴처</a>
+							<a href="javascript:;" class="sort_boxtab">세미패키지</a>
+							<a href="javascript:;" class="sort_boxtab">스마트패키지</a>
+						</div>
+					</div>
+					<div class="get_list_zone">
+						<ul class="data_box_list">
+							<li>
+								<div class="list_thum_obj">
+									<a href="#" class="list_thum_img_row"><img src="./images/temp_638x252_2.jpg" alt=""></a>
+									<div class="list_thum_spec_row">
+										<a href="#" class="list_thum_spec_group">
+											<div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+											<div class="list_thum_spec_dl">
+												<span class="list_thum_spec_dt">최저가격</span>
+												<span class="list_thum_spec_dd">3,490,000원~</span>
+											</div>
+										</a>
+										<div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="list_thum_obj">
+									<a href="#" class="list_thum_img_row"><img src="./images/temp_638x252_2.jpg" alt=""></a>
+									<div class="list_thum_spec_row">
+										<a href="#" class="list_thum_spec_group">
+											<div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+											<div class="list_thum_spec_dl">
+												<span class="list_thum_spec_dt">최저가격</span>
+												<span class="list_thum_spec_dd">3,490,000원~</span>
+											</div>
+										</a>
+										<div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="list_thum_obj">
+									<a href="#" class="list_thum_img_row"><img src="./images/temp_638x252_2.jpg" alt=""></a>
+									<div class="list_thum_spec_row">
+										<a href="#" class="list_thum_spec_group">
+											<div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+											<div class="list_thum_spec_dl">
+												<span class="list_thum_spec_dt">최저가격</span>
+												<span class="list_thum_spec_dd">3,490,000원~</span>
+											</div>
+										</a>
+										<div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="list_thum_obj">
+									<a href="#" class="list_thum_img_row"><img src="./images/temp_638x252_2.jpg" alt=""></a>
+									<div class="list_thum_spec_row">
+										<a href="#" class="list_thum_spec_group">
+											<div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+											<div class="list_thum_spec_dl">
+												<span class="list_thum_spec_dt">최저가격</span>
+												<span class="list_thum_spec_dd">3,490,000원~</span>
+											</div>
+										</a>
+										<div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="list_thum_obj">
+									<a href="#" class="list_thum_img_row"><img src="./images/temp_638x252_2.jpg" alt=""></a>
+									<div class="list_thum_spec_row">
+										<a href="#" class="list_thum_spec_group">
+											<div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+											<div class="list_thum_spec_dl">
+												<span class="list_thum_spec_dt">최저가격</span>
+												<span class="list_thum_spec_dd">3,490,000원~</span>
+											</div>
+										</a>
+										<div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="list_thum_obj">
+									<a href="#" class="list_thum_img_row"><img src="./images/temp_638x252_2.jpg" alt=""></a>
+									<div class="list_thum_spec_row">
+										<a href="#" class="list_thum_spec_group">
+											<div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+											<div class="list_thum_spec_dl">
+												<span class="list_thum_spec_dt">최저가격</span>
+												<span class="list_thum_spec_dd">3,490,000원~</span>
+											</div>
+										</a>
+										<div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- // middle -->
+		<!-- footer -->
+		<footer class="footer_wrap">
+			<div class="footer_else_group">
+				<div class="footer_else_row">
+					<p class="footer_else_title">오지투어 sns 공식채널</p>
+					<ul class="footer_sns_list">
+						<li><a href="#" class="sns_item sns_kakao" target="_blank"><span class="hdtext">kakao</span></a></li>
+						<li><a href="#" class="sns_item sns_blog" target="_blank"><span class="hdtext">blog</span></a></li>
+						<li><a href="#" class="sns_item sns_cafe" target="_blank"><span class="hdtext">cafe</span></a></li>
+						<li><a href="#" class="sns_item sns_insta" target="_blank"><span class="hdtext">insta</span></a></li>
+						<li><a href="#" class="sns_item sns_face" target="_blank"><span class="hdtext">facebook</span></a></li>
+					</ul>
+				</div>
+				<div class="footer_else_row type2">
+					<ul class="bottom_menu_list">
+						<li><a href="#" class="bottom_menu">로그인</a></li>
+						<li><a href="#" class="bottom_menu">예약확인</a></li>
+						<li><a href="#" class="bottom_menu">질문과 답변</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer_main_group">
+				<div class="footer_copyitem_list_wrap">
+					<p class="footer_copymain">(주)오지투어</p>
+					<ul class="footer_copyitem_list">
+						<li class="full"><span class="footer_copyitem">대표 : 오상훈</span></li>
+						<li class="full"><span class="footer_copyitem">주소 : 서울특별시 강서구 양천로 583, A동 1504호(염창동, 우림블루나인)</span></li>
+						<li><span class="footer_copyitem">전화 : 02)737-9808</span></li>
+						<li><span class="footer_copyitem">팩스 : 02)6013-9808</span></li>
+						<li><span class="footer_copyitem">이메일 : ojitravel@gmail.com</span></li>
+						<li><span class="footer_copyitem">이메일주소 무단수집 거부</span></li>
+						<li class="full"><span class="footer_copyitem">사업자등록번호 : 580-88-01143</span></li>
+						<li class="full"><span class="footer_copyitem">관광사업자등록증 : 제2020-000031호</span></li>
+						<li class="full"><span class="footer_copyitem">통신판매업신고번호 : 제2020-서울강서-3592호</span></li>
+						<li class="full"><span class="footer_copyitem">당사는 국외여행 영업보증보험 3천만원, 국외 기획여행 보증보험 2억원, 여행자보험 2억원에 가입되어 있습니다.</span></li>
+						<li class="full"><span class="footer_copyitem">개인정보관리책임자 : 이선미</span></li>
+					</ul>
+				</div>
+				<p class="footer_copyright">Copyright ⓒojitour 2011. All rights reserved.</p>
+			</div>
+		</footer>
+		<!-- // footer -->
+	</div>
+</body>
+
+</html>
