@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1280" />
+	<link href="./css/common_c.css" rel="stylesheet">
+	<link href="./css/layout.css" rel="stylesheet">
+	<link href="./css/swiper.min.css" rel="stylesheet">
+	<link href="./css/temp_style.css" rel="stylesheet">
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/temp_front.js"></script>
+	<title></title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap">
+		<!-- header -->
+		<header class="header_zone">
+			<div class="header_util_wrap">
+				<div class="layout_pixin header_util_both">
+					<div class="header_util_cols">
+						<ul class="header_util_list">
+							<li><a href="#" class="header_util_menu">홈쇼핑</a></li>
+							<li><a href="#" class="header_util_menu">기획전</a></li>
+							<li><a href="#" class="header_util_menu">이벤트</a></li>
+						</ul>
+					</div>
+					<div class="header_util_cols">
+						<ul class="header_util_list">
+							<li><a href="#" class="header_util_menu">로그인</a></li>
+							<li><a href="#" class="header_util_menu ico_men">회원가입</a></li>
+							<li><a href="#" class="header_util_menu">마이페이지</a></li>
+							<li><a href="#" class="header_util_menu">예약/결재조회</a></li>
+							<li><a href="#" class="header_util_menu">고객센터</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="header_main_wrap">
+				<div class="layout_pixin header_main_both">
+					<h1 class="header_toplogo"><a href="#" class="header_toplogo_link"><span class="hdtext">Allways travel</span></a></h1>
+					<fieldset class="header_searchform">
+						<legend>검색</legend>
+						<div class="topsearch_input_wrap"><input type="text" placeholder="검색어를 입력하세요" class="topsearch_input"></div>
+						<a href="#" class="btn_topsearch_submit"><span class="hdtext">검색</span></a>
+					</fieldset>
+				</div>
+			</div>
+			<div class="header_gnb_wrap">
+				<div class="layout_pixin">
+					<div class="header_gnb_long_cols">
+						<ul class="header_gnb_list">
+							<li><a href="#" class="header_gnb_one"><span class="gnb_one_intext">국내투어</span></a></li>
+							<li><a href="#" class="header_gnb_one"><span class="gnb_one_intext">해외투어</span></a></li>
+							<li><a href="#" class="header_gnb_one"><span class="gnb_one_intext">기획전</span></a></li>
+							<li><a href="#" class="header_gnb_one"><span class="gnb_one_intext">멤버십</span></a></li>
+							<li><a href="#" class="header_gnb_one"><span class="gnb_one_intext">호텔/리조트</span></a></li>
+							<li><a href="#" class="header_gnb_one"><span class="gnb_one_intext">기업단체</span></a></li>
+							<li><a href="#" class="header_gnb_one"><span class="gnb_one_intext">고객센터</span></a></li>
+						</ul>
+					</div>
+					<div classs="header_gnb_short_cols">
+						<span class="head_totalmenu_label">전체메뉴</span>
+						<a href="#" class="btn_totalmenu"><span class="totalmenu_inobj"><span class="hdtext">전체메뉴</span></span></a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- // header -->
+		<!-- middle -->
+		<section class="middle_zone">
+			<div class="main_visual_wrap">
+				<a href="javascript:;" class="btn_mv_control prev_control"><span class="hdtext">이전</span></a>
+				<div class="swiper-container main_visual_container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#" class="main_visual_banner" style="background-image:url(./images/main/main_visual_01.jpg)"></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="main_visual_banner" style="background-image:url(./images/main/main_visual_02.jpg)"></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="main_visual_banner" style="background-image:url(./images/main/main_visual_03.jpg)"></a>
+						</div>
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_mv_control next_control"><span class="hdtext">다음</span></a>
+				<div class="mv_bottom_control_wrap">
+					<div class="mv_bottom_cols has_navi">
+						<div class="swiper-pagination main_visual_paging">
+						</div>
+					</div>
+					<div class="mv_bottom_cols has_auto">
+						<ul class="swiper-auto-control-list">
+							<li><a href="#" class="btn_mv_stop"><span class="hdtext">정지</span></a></li>
+							<li><a href="#" class="btn_mv_play"><span class="hdtext">재생</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="main_content_wrap">
+				<div class="mc_vitem">
+					<div class="mc_pixin">
+						<div class="mc_vitem_title_row">
+							<h3 class="mc_vitem_title">베스트상품</h3>
+							<div class="mc_title_layer_right">
+								<div class="boxquad_tab_list">
+									<a href="#" class="boxquad_tab active">실속</a>
+									<a href="#" class="boxquad_tab">품격</a>
+									<a href="#" class="boxquad_tab">고품격</a>
+									<a href="#" class="boxquad_tab">단독</a>
+								</div>
+							</div>
+						</div>
+						<div class="mc_vitem_content_row">
+							<div class="swiper-container best_swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a href="#" class="mc_thumbanner">
+											<div class="thum_rows">
+												<img src="./images/main/temp_mc290x170.jpg" alt="">
+												<span class="box_label">HOT</span>
+											</div>
+											<div class="spec_rows">
+												<div class="mc_spec_title">루르드/파티마/산티아고 데 9일</div>
+												<div class="mc_spec_sub">#캐나다  #화이트홀스  #오로라  #버킷리스트</div>
+												<div class="mc_spec_price">
+													<div class="price_num_group prev_type">
+														<span class="price_num_value">6,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+													<div class="price_num_group">
+														<span class="price_num_value">3,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="mc_thumbanner">
+											<div class="thum_rows">
+												<img src="./images/main/temp_mc290x170.jpg" alt="">
+												<span class="box_label">HOT</span>
+											</div>
+											<div class="spec_rows">
+												<div class="mc_spec_title">럭셔리 명품] 다낭 빈펄 남호이다낭 빈펄 남호이다낭 빈펄 남호이다낭 빈펄 남호이</div>
+												<div class="mc_spec_sub">#캐나다  #화이트홀스  #오로라  #버킷리스트 #캐나다  #화이트홀스  #오로라  #버킷리스트</div>
+												<div class="mc_spec_price">
+													<div class="price_num_group prev_type">
+														<span class="price_num_value">6,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+													<div class="price_num_group">
+														<span class="price_num_value">3,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="mc_thumbanner">
+											<div class="thum_rows">
+												<img src="./images/main/temp_mc290x170.jpg" alt="">
+												<span class="box_label">HOT</span>
+											</div>
+											<div class="spec_rows">
+												<div class="mc_spec_title">[골프텔] 파타나 단독 3박5일 54홀파타나 단독 3박5일 54홀파타나 단독 3박5일 54홀파타나 단독 3박5일 54홀</div>
+												<div class="mc_spec_sub">#캐나다  #화이트홀스  #오로라  #버킷리스트</div>
+												<div class="mc_spec_price">
+													<div class="price_num_group prev_type">
+														<span class="price_num_value">6,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+													<div class="price_num_group">
+														<span class="price_num_value">3,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="mc_thumbanner">
+											<div class="thum_rows">
+												<img src="./images/main/temp_mc290x170.jpg" alt="">
+												<span class="box_label">HOT</span>
+											</div>
+											<div class="spec_rows">
+												<div class="mc_spec_title">[휴양과 골프를 한번에!] 코타키나발루 </div>
+												<div class="mc_spec_sub">#캐나다  #화이트홀스  #오로라  #버킷리스트</div>
+												<div class="mc_spec_price">
+													<div class="price_num_group prev_type">
+														<span class="price_num_value">6,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+													<div class="price_num_group">
+														<span class="price_num_value">3,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="mc_thumbanner">
+											<div class="thum_rows">
+												<img src="./images/main/temp_mc290x170.jpg" alt="">
+												<span class="box_label">HOT</span>
+											</div>
+											<div class="spec_rows">
+												<div class="mc_spec_title">루르드/파티마/산티아고 데 9일</div>
+												<div class="mc_spec_sub">#캐나다  #화이트홀스  #오로라  #버킷리스트</div>
+												<div class="mc_spec_price">
+													<div class="price_num_group prev_type">
+														<span class="price_num_value">6,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+													<div class="price_num_group">
+														<span class="price_num_value">3,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="mc_thumbanner">
+											<div class="thum_rows">
+												<img src="./images/main/temp_mc290x170.jpg" alt="">
+												<span class="box_label">HOT</span>
+											</div>
+											<div class="spec_rows">
+												<div class="mc_spec_title">럭셔리 명품] 다낭 빈펄 남호이다낭 빈펄 남호이다낭 빈펄 남호이다낭 빈펄 남호이</div>
+												<div class="mc_spec_sub">#캐나다  #화이트홀스  #오로라  #버킷리스트 #캐나다  #화이트홀스  #오로라  #버킷리스트</div>
+												<div class="mc_spec_price">
+													<div class="price_num_group prev_type">
+														<span class="price_num_value">6,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+													<div class="price_num_group">
+														<span class="price_num_value">3,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="mc_thumbanner">
+											<div class="thum_rows">
+												<img src="./images/main/temp_mc290x170.jpg" alt="">
+												<span class="box_label">HOT</span>
+											</div>
+											<div class="spec_rows">
+												<div class="mc_spec_title">[골프텔] 파타나 단독 3박5일 54홀파타나 단독 3박5일 54홀파타나 단독 3박5일 54홀파타나 단독 3박5일 54홀</div>
+												<div class="mc_spec_sub">#캐나다  #화이트홀스  #오로라  #버킷리스트</div>
+												<div class="mc_spec_price">
+													<div class="price_num_group prev_type">
+														<span class="price_num_value">6,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+													<div class="price_num_group">
+														<span class="price_num_value">3,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="mc_thumbanner">
+											<div class="thum_rows">
+												<img src="./images/main/temp_mc290x170.jpg" alt="">
+												<span class="box_label">HOT</span>
+											</div>
+											<div class="spec_rows">
+												<div class="mc_spec_title">[휴양과 골프를 한번에!] 코타키나발루 </div>
+												<div class="mc_spec_sub">#캐나다  #화이트홀스  #오로라  #버킷리스트</div>
+												<div class="mc_spec_price">
+													<div class="price_num_group prev_type">
+														<span class="price_num_value">6,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+													<div class="price_num_group">
+														<span class="price_num_value">3,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-pagination mc_paging"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mc_vitem type2">
+					<div class="mc_pixin">
+						<div class="mc_vitem_title_row">
+							<h3 class="mc_vitem_title">추천 상품</h3>
+							<div class="mc_title_layer_right">
+								<div class="btn_mc_control_obj_group">
+									<a href="#" class="btn_mc_control_obj prev_obj"><span class="hdtext">이전</span></a>
+									<a href="#" class="btn_mc_control_obj next_obj"><span class="hdtext">다음</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="mc_vitem_content_row">
+							<div class="swiper-container recommend_swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a href="#" class="mc_thumbanner">
+											<div class="thum_rows">
+												<img src="./images/main/temp_mc390x222_01.jpg" alt="">
+												<span class="box_label type2">NEW</span>
+											</div>
+											<div class="spec_rows">
+												<div class="mc_spec_title">이탈리아 정통 일주 8~9일 #베스트셀러</div>
+												<div class="mc_spec_sub type2">
+													1일 18+18 / 18홀을 치면 18홀은 덤으로!! = 1일 36홀! <br>유네스코가 지정한 세계 문화 유산과 코랄빛이 맞이하는 나폴리
+												</div>
+												<div class="mc_spec_author">
+													<div class="author_logo_wrap">
+														<span class="author_logo"><img src="./images/main/ico_small_ci.png" alt=""></span>
+														<span class="author_text">진에어</span>
+													</div>
+												</div>
+												<div class="mc_spec_else">
+													<div class="ico_guidetext ico_calender"><span class="ico_guidetext_in">출발 08/06</span></div>
+												</div>
+												<div class="mc_spec_price type2">
+													<div class="price_num_group">
+														<span class="price_num_value">3,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="mc_thumbanner">
+											<div class="thum_rows">
+												<img src="./images/main/temp_mc390x222_02.jpg" alt="">
+												<span class="box_label">HOT</span>
+											</div>
+											<div class="spec_rows">
+												<div class="mc_spec_title">이탈리아 정통 일주 8~9일 #베스트셀러</div>
+												<div class="mc_spec_sub type2">
+													1일 18+18 / 18홀을 치면 18홀은 덤으로!! = 1일 36홀! <br>유네스코가 지정한 세계 문화 유산과 코랄빛이 맞이하는 나폴리
+												</div>
+												<div class="mc_spec_author">
+													<div class="author_logo_wrap">
+														<span class="author_logo"><img src="./images/main/ico_small_ci.png" alt=""></span>
+														<span class="author_text">진에어</span>
+													</div>
+												</div>
+												<div class="mc_spec_else">
+													<div class="ico_guidetext ico_calender"><span class="ico_guidetext_in">출발 08/06</span></div>
+												</div>
+												<div class="mc_spec_price type2">
+													<div class="price_num_group">
+														<span class="price_num_value">3,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="mc_thumbanner">
+											<div class="thum_rows">
+												<img src="./images/main/temp_mc390x222_01.jpg" alt="">
+												<span class="box_label type2">NEW</span>
+											</div>
+											<div class="spec_rows">
+												<div class="mc_spec_title">이탈리아 정통 일주 8~9일 #베스트셀러</div>
+												<div class="mc_spec_sub type2">
+													1일 18+18 / 18홀을 치면 18홀은 덤으로!! = 1일 36홀! <br>유네스코가 지정한 세계 문화 유산과 코랄빛이 맞이하는 나폴리
+												</div>
+												<div class="mc_spec_author">
+													<div class="author_logo_wrap">
+														<span class="author_logo"><img src="./images/main/ico_small_ci.png" alt=""></span>
+														<span class="author_text">진에어</span>
+													</div>
+												</div>
+												<div class="mc_spec_else">
+													<div class="ico_guidetext ico_calender"><span class="ico_guidetext_in">출발 08/06</span></div>
+												</div>
+												<div class="mc_spec_price type2">
+													<div class="price_num_group">
+														<span class="price_num_value">3,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="mc_thumbanner">
+											<div class="thum_rows">
+												<img src="./images/main/temp_mc390x222_01.jpg" alt="">
+												<span class="box_label type2">NEW</span>
+											</div>
+											<div class="spec_rows">
+												<div class="mc_spec_title">이탈리아 정통 일주 8~9일 #베스트셀러</div>
+												<div class="mc_spec_sub type2">
+													1일 18+18 / 18홀을 치면 18홀은 덤으로!! = 1일 36홀! <br>유네스코가 지정한 세계 문화 유산과 코랄빛이 맞이하는 나폴리
+												</div>
+												<div class="mc_spec_author">
+													<div class="author_logo_wrap">
+														<span class="author_logo"><img src="./images/main/ico_small_ci.png" alt=""></span>
+														<span class="author_text">진에어</span>
+													</div>
+												</div>
+												<div class="mc_spec_else">
+													<div class="ico_guidetext ico_calender"><span class="ico_guidetext_in">출발 08/06</span></div>
+												</div>
+												<div class="mc_spec_price type2">
+													<div class="price_num_group">
+														<span class="price_num_value">3,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="mc_thumbanner">
+											<div class="thum_rows">
+												<img src="./images/main/temp_mc390x222_02.jpg" alt="">
+												<span class="box_label">HOT</span>
+											</div>
+											<div class="spec_rows">
+												<div class="mc_spec_title">이탈리아 정통 일주 8~9일 #베스트셀러</div>
+												<div class="mc_spec_sub type2">
+													1일 18+18 / 18홀을 치면 18홀은 덤으로!! = 1일 36홀! <br>유네스코가 지정한 세계 문화 유산과 코랄빛이 맞이하는 나폴리
+												</div>
+												<div class="mc_spec_author">
+													<div class="author_logo_wrap">
+														<span class="author_logo"><img src="./images/main/ico_small_ci.png" alt=""></span>
+														<span class="author_text">진에어</span>
+													</div>
+												</div>
+												<div class="mc_spec_else">
+													<div class="ico_guidetext ico_calender"><span class="ico_guidetext_in">출발 08/06</span></div>
+												</div>
+												<div class="mc_spec_price type2">
+													<div class="price_num_group">
+														<span class="price_num_value">3,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="mc_thumbanner">
+											<div class="thum_rows">
+												<img src="./images/main/temp_mc390x222_01.jpg" alt="">
+												<span class="box_label type2">NEW</span>
+											</div>
+											<div class="spec_rows">
+												<div class="mc_spec_title">이탈리아 정통 일주 8~9일 #베스트셀러</div>
+												<div class="mc_spec_sub type2">
+													1일 18+18 / 18홀을 치면 18홀은 덤으로!! = 1일 36홀! <br>유네스코가 지정한 세계 문화 유산과 코랄빛이 맞이하는 나폴리
+												</div>
+												<div class="mc_spec_author">
+													<div class="author_logo_wrap">
+														<span class="author_logo"><img src="./images/main/ico_small_ci.png" alt=""></span>
+														<span class="author_text">진에어</span>
+													</div>
+												</div>
+												<div class="mc_spec_else">
+													<div class="ico_guidetext ico_calender"><span class="ico_guidetext_in">출발 08/06</span></div>
+												</div>
+												<div class="mc_spec_price type2">
+													<div class="price_num_group">
+														<span class="price_num_value">3,490,000</span>
+														<span class="price_num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mc_vitem">
+					<div class="mc_pixin">
+						<div class="mc_vitem_title_row">
+							<h3 class="mc_vitem_title ico_golf"><span class="mc_vitem_title_ico_text">지금 떠나자! 골프여행</span></h3>
+						</div>
+						<div class="mc_vitem_content_row">
+							<div class="mc_grid_list_wrap">
+								<ul class="mc_grid_list">
+									<li>
+										<a href="#" class="mc_grid_item">
+											<div class="mc_grid_thum"><img src="./images/main/temp_mc390x222_01.jpg" alt=""></div>
+											<div class="mc_grid_spec" style="background-color:#39aad9;">
+												<div class="mc_grid_main">18홀치면 18홀 덤!</div>
+												<div class="mc_grid_sub">실속 4박6일 #초초특가 #에어부산</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="mc_grid_item">
+											<div class="mc_grid_thum"><img src="./images/main/temp_mc390x222_02.jpg" alt=""></div>
+											<div class="mc_grid_spec" style="background-color:#1abcd5;">
+												<div class="mc_grid_main">18홀치면 18홀 덤!</div>
+												<div class="mc_grid_sub">실속 4박6일 #초초특가 #에어부산</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="mc_grid_item">
+											<div class="mc_grid_thum"><img src="./images/main/temp_mc390x222_01.jpg" alt=""></div>
+											<div class="mc_grid_spec" style="background-color:#5f9ff1;">
+												<div class="mc_grid_main">18홀치면 18홀 덤! 테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트</div>
+												<div class="mc_grid_sub">실속 4박6일 #초초특가 #에어부산</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="mc_grid_item">
+											<div class="mc_grid_thum"><img src="./images/main/temp_mc390x222_02.jpg" alt=""></div>
+											<div class="mc_grid_spec" style="background-color:#47c86c;">
+												<div class="mc_grid_main">18홀치면 18홀 덤!</div>
+												<div class="mc_grid_sub">실속 4박6일 #초초특가 #에어부산</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="mc_grid_item">
+											<div class="mc_grid_thum"><img src="./images/main/temp_mc390x222_01.jpg" alt=""></div>
+											<div class="mc_grid_spec" style="background-color:#9090fc;">
+												<div class="mc_grid_main">18홀치면 18홀 덤!</div>
+												<div class="mc_grid_sub">실속 4박6일 #초초특가 #에어부산</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="mc_grid_item">
+											<div class="mc_grid_thum"><img src="./images/main/temp_mc390x222_02.jpg" alt=""></div>
+											<div class="mc_grid_spec" style="background-color:#fb7878;">
+												<div class="mc_grid_main">18홀치면 18홀 덤!</div>
+												<div class="mc_grid_sub">실속 4박6일 #초초특가 #에어부산</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mc_vitem">
+					<div class="mc_pixin">
+						<div class="mc_vitem_title_row">
+							<h3 class="mc_vitem_title">TV 홈쇼핑</h3>
+							<div class="mc_title_layer_right">
+								<div class="btn_mc_control_obj_group type2">
+									<a href="#" class="btn_mc_control_obj prev_obj"><span class="hdtext">이전</span></a>
+									<a href="#" class="btn_mc_control_obj next_obj"><span class="hdtext">다음</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="mc_vitem_content_row">
+							<div class="swiper-container tvhome_swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mc_vitem">
+					<div class="mc_pixin">
+					</div>
+				</div>
+				<div class="mc_vitem">
+					<div class="mc_pixin">
+					</div>
+				</div>
+				<div class="mc_vitem">
+					<div class="mc_pixin">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- // middle -->
+		<!-- footer -->
+		<footer class="footer_zone">
+			<div class="footer_util_wrap">
+				<div class="layout_pixin">
+				</div>
+			</div>
+			<div class="footer_main_wrap">
+				<div class="layout_pixin">
+				</div>
+			</div>
+		</footer>
+		<!-- // footer -->
+	</div>
+</body>
+</html>
