@@ -101,184 +101,164 @@
 				<div class="swiper-container mv_container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<a href="#" class="mv_item" style="background-image:url(./images/main/mv_sample01.jpg)"></a>
+							<a href="#" class="mv_item" style="background-image:url(./images/main/main_visual_01.jpg)"></a>
 						</div>
 						<div class="swiper-slide">
-							<a href="#" class="mv_item" style="background-image:url(./images/main/mv_sample02.jpg)"></a>
+							<a href="#" class="mv_item" style="background-image:url(./images/main/main_visual_02.jpg)"></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="mv_item" style="background-image:url(./images/main/main_visual_03.jpg)"></a>
 						</div>
 					</div>
 				</div>
 				<a href="javascript:;" class="btn_mv_control next_control"><span class="hdtext">다음</span></a>
-				<div class="mv_bottom_control_wrap">
-					<div class="mv_bottom_cols has_navi">
-						<div class="swiper-pagination main_visual_paging">
-						</div>
-					</div>
-					<div class="mv_bottom_cols has_auto">
-						<ul class="swiper_auto_control_list">
-							<li><a href="#" class="btn_mv_stop"><span class="hdtext">정지</span></a></li>
-							<li><a href="#" class="btn_mv_play"><span class="hdtext">재생</span></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="mvlayer_parent">
-					<div class="search_field_wrap">
-						<div class="search_field_cols define_local">
-							<a href="#" class="search_field_form" data-layerTarget="#layer_box_01">
-								<div class="search_form_label">지역</div>
-								<div class="search_form_text_g">
-									<div class="search_form_text_place">어디로 가세요?</div>
-									<div class="search_form_text_result"></div>
-								</div>
-							</a>
-						</div>
-						<div class="search_field_cols define_theme">
-							<a href="#" class="search_field_form" data-layerTarget="#layer_box_02">
-								<div class="search_form_label">테마</div>
-								<div class="search_form_text_g">
-									<div class="search_form_text_place">취향에 맞는 상품을 원하세요?</div>
-									<div class="search_form_text_result"></div>
-								</div>
-							</a>
-						</div>
-						<div class="search_field_cols define_start">
-							<a href="#" class="search_field_form">
-								<div class="search_form_label">출발일</div>
-								<div class="search_form_text_g">
-									<input type="text" class="input_search_form" placeholder="날짜를 입력하세요">
-								</div>
-							</a>
-						</div>
-						<div class="search_field_cols define_search">
-							<div class="search_field_form">
-								<p class="search_form_label">검색어</p>
-								<input type="text" class="input_search_form" placeholder="검색어를 입력해주세요">
+				<div class="mv_bottom_control_wrap type2">
+					<div class="mv_bottom_in_control">
+						<div class="mv_bottom_cols has_navi">
+							<div class="swiper-pagination main_visual_paging">
 							</div>
 						</div>
-						<div class="search_field_cols define_btn">
-							<a href="#" class="btn_search_form"><span class="hdtext">검색</span></a>
+						<div class="mv_bottom_cols has_auto">
+							<ul class="swiper_auto_control_list">
+								<li><a href="#" class="btn_mv_play"><span class="hdtext">재생</span></a></li>
+								<li><a href="#" class="btn_mv_stop"><span class="hdtext">정지</span></a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
+			<script>
+				document.addEventListener("DOMContentLoaded", () => {
+					mainVisual();
+					subEmpSwiper();
+				});
+			</script>
 			<div class="mid_emp_zone">
 				<p class="mid_emp_title_row"><span class="mid_emp_title">베스트 상품</span></p>
-				<div class="swiper-container multi_swiper" id="mc_swiper_best">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<a href="#" class="mc_thumbanner">
-								<div class="thum_rows">
-									<img src="./images/main/temp_376x240.png" alt="">
-								</div>
-								<div class="spec_rows">
-									<span class="box_label boxtype3 bgtype5">HOT</span>
-									<div class="mc_spec_title clamp_02">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
-									<div class="mc_spec_sub">
-										페루/볼리비아/칠레/아르헨티나/브라질
+				<div class="mid_emp_content_row">
+					<div class="swiper-container emp_swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="#" class="mc_thumbanner type2">
+									<div class="thum_rows">
+										<img src="./images/main/temp_376x240.png" alt="">
 									</div>
-									<div class="mc_spec_price">
-										<div class="price_num_group">
-											<span class="price_num_value">5,290,000</span>
-											<span class="price_num_unit">원~</span>
+									<div class="spec_rows">
+										<span class="box_label boxtype3 bgtype6">HOT</span>
+										<div class="mc_spec_title clamp_02">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
+										<div class="mc_spec_sub">
+											페루/볼리비아/칠레/아르헨티나/브라질
+										</div>
+										<div class="mc_spec_price">
+											<div class="price_num_group">
+												<span class="price_num_value">5,290,000</span>
+												<span class="price_num_unit">원~</span>
+											</div>
 										</div>
 									</div>
-								</div>
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a href="#" class="mc_thumbanner">
-								<div class="thum_rows">
-									<img src="./images/main/temp02_mc290x170.png" alt="">
-								</div>
-								<div class="spec_rows">
-									<div class="mc_spec_title clamp_02">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
-									<div class="mc_spec_sub">
-										페루/볼리비아/칠레/아르헨티나/브라질
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" class="mc_thumbanner type2">
+									<div class="thum_rows">
+										<img src="./images/main/temp_376x240.png" alt="">
 									</div>
-									<div class="mc_spec_price">
-										<div class="price_num_group">
-											<span class="price_num_value">3,690,000</span>
-											<span class="price_num_unit">원~</span>
+									<div class="spec_rows">
+										<span class="box_label boxtype3 bgtype6">HOT</span>
+										<div class="mc_spec_title clamp_02">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
+										<div class="mc_spec_sub">
+											페루/볼리비아/칠레/아르헨티나/브라질
+										</div>
+										<div class="mc_spec_price">
+											<div class="price_num_group">
+												<span class="price_num_value">5,290,000</span>
+												<span class="price_num_unit">원~</span>
+											</div>
 										</div>
 									</div>
-								</div>
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a href="#" class="mc_thumbanner">
-								<div class="thum_rows">
-									<img src="./images/main/temp02_mc290x170.png" alt="">
-								</div>
-								<div class="spec_rows">
-									<div class="mc_spec_title clamp_02">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
-									<div class="mc_spec_sub">
-										페루/볼리비아/칠레/아르헨티나/브라질
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" class="mc_thumbanner type2">
+									<div class="thum_rows">
+										<img src="./images/main/temp_376x240.png" alt="">
 									</div>
-									<div class="mc_spec_price">
-										<div class="price_num_group">
-											<span class="price_num_value">3,690,000</span>
-											<span class="price_num_unit">원~</span>
+									<div class="spec_rows">
+										<span class="box_label boxtype3 bgtype6">HOT</span>
+										<div class="mc_spec_title clamp_02">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일 포르투갈, 모로코 31일포르투갈, 모로코 31일</div>
+										<div class="mc_spec_sub">
+											페루/볼리비아/칠레/아르헨티나/브라질
+										</div>
+										<div class="mc_spec_price">
+											<div class="price_num_group">
+												<span class="price_num_value">5,290,000</span>
+												<span class="price_num_unit">원~</span>
+											</div>
 										</div>
 									</div>
-								</div>
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a href="#" class="mc_thumbanner">
-								<div class="thum_rows">
-									<img src="./images/main/temp02_mc290x170.png" alt="">
-								</div>
-								<div class="spec_rows">
-									<div class="mc_spec_title clamp_02">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
-									<div class="mc_spec_sub">
-										페루/볼리비아/칠레/아르헨티나/브라질
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" class="mc_thumbanner type2">
+									<div class="thum_rows">
+										<img src="./images/main/temp_376x240.png" alt="">
 									</div>
-									<div class="mc_spec_price">
-										<div class="price_num_group">
-											<span class="price_num_value">3,690,000</span>
-											<span class="price_num_unit">원~</span>
+									<div class="spec_rows">
+										<span class="box_label boxtype3 bgtype6">HOT</span>
+										<div class="mc_spec_title clamp_02">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
+										<div class="mc_spec_sub">
+											페루/볼리비아/칠레/아르헨티나/브라질
+										</div>
+										<div class="mc_spec_price">
+											<div class="price_num_group">
+												<span class="price_num_value">5,290,000</span>
+												<span class="price_num_unit">원~</span>
+											</div>
 										</div>
 									</div>
-								</div>
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a href="#" class="mc_thumbanner">
-								<div class="thum_rows">
-									<img src="./images/main/temp02_mc290x170.png" alt="">
-								</div>
-								<div class="spec_rows">
-									<div class="mc_spec_title clamp_02">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
-									<div class="mc_spec_sub">
-										페루/볼리비아/칠레/아르헨티나/브라질
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" class="mc_thumbanner type2">
+									<div class="thum_rows">
+										<img src="./images/main/temp_376x240.png" alt="">
 									</div>
-									<div class="mc_spec_price">
-										<div class="price_num_group">
-											<span class="price_num_value">3,690,000</span>
-											<span class="price_num_unit">원~</span>
+									<div class="spec_rows">
+										<span class="box_label boxtype3 bgtype6">HOT</span>
+										<div class="mc_spec_title clamp_02">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
+										<div class="mc_spec_sub">
+											페루/볼리비아/칠레/아르헨티나/브라질
+										</div>
+										<div class="mc_spec_price">
+											<div class="price_num_group">
+												<span class="price_num_value">5,290,000</span>
+												<span class="price_num_unit">원~</span>
+											</div>
 										</div>
 									</div>
-								</div>
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a href="#" class="mc_thumbanner">
-								<div class="thum_rows">
-									<img src="./images/main/temp02_mc290x170.png" alt="">
-								</div>
-								<div class="spec_rows">
-									<div class="mc_spec_title clamp_02">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
-									<div class="mc_spec_sub">
-										페루/볼리비아/칠레/아르헨티나/브라질
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" class="mc_thumbanner type2">
+									<div class="thum_rows">
+										<img src="./images/main/temp_376x240.png" alt="">
 									</div>
-									<div class="mc_spec_price">
-										<div class="price_num_group">
-											<span class="price_num_value">3,690,000</span>
-											<span class="price_num_unit">원~</span>
+									<div class="spec_rows">
+										<span class="box_label boxtype3 bgtype6">HOT</span>
+										<div class="mc_spec_title clamp_02">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
+										<div class="mc_spec_sub">
+											페루/볼리비아/칠레/아르헨티나/브라질
+										</div>
+										<div class="mc_spec_price">
+											<div class="price_num_group">
+												<span class="price_num_value">5,290,000</span>
+												<span class="price_num_unit">원~</span>
+											</div>
 										</div>
 									</div>
-								</div>
-							</a>
+								</a>
+							</div>
+
 						</div>
 					</div>
 				</div>
@@ -287,22 +267,37 @@
 				<p class="sc_content_title">테마로 만나는 남미여행</p>
 				<div class="sc_boxtab_list_wrap">
 					<ul class="sc_boxtab_list">
-						<li>
+						<li class="active">
 							<a href="#" class="sc_boxtab">
-								<div class="sc_boxtab_main">스마트 패키지</div>
-								<div class="sc_boxtab_sub">편리함과 자율성, 투명성 패키지 여행 </div>
+								<div class="sc_boxtab_text_group">
+									<div class="sc_boxtab_main">스마트 패키지</div>
+									<div class="sc_boxtab_sub">편리함과 자율성, 투명성 패키지 여행 </div>
+								</div>
+								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" class="pointer">
+									<path class="cls-1" d="M0,0L6,12,13,0H0Z" />
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="sc_boxtab type2">
-								<div class="sc_boxtab_main">세미 패키지</div>
-								<div class="sc_boxtab_sub">편리함과 자율성, 투명성 패키지 여행</div>
+								<div class="sc_boxtab_text_group">
+									<div class="sc_boxtab_main">세미 패키지</div>
+									<div class="sc_boxtab_sub">편리함과 자율성, 투명성 패키지 여행</div>
+								</div>
+								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" class="pointer">
+									<path class="cls-1" d="M0,0L6,12,13,0H0Z" />
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="sc_boxtab type3">
-								<div class="sc_boxtab_main">리얼 어드밴처</div>
-								<div class="sc_boxtab_sub">편리함과 자율성, 투명성 패키지 여행 </div>
+								<div class="sc_boxtab_text_group">
+									<div class="sc_boxtab_main">리얼 어드밴처</div>
+									<div class="sc_boxtab_sub">편리함과 자율성, 투명성 패키지 여행 </div>
+								</div>
+								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" class="pointer">
+									<path class="cls-1" d="M0,0L6,12,13,0H0Z" />
+								</svg>
 							</a>
 						</li>
 					</ul>
@@ -319,12 +314,12 @@
 								<a href="#" class="board_thumnail_img_cols">
 									<img src="./images/sub/temp_350x220.png" alt="">
 									<span class="thum_layer">
-										<span clas="thum_label">아프리카<strong>27</strong>days</span>
+										<span class="thum_label"><span class="key">아프리카</span><strong class="emp">27</strong><span class="unit">days</span></span>
 									</span>
 								</a>
 								<div class="board_thumnail_spec_cols">
 									<a href="#" class="board_spectext_group">
-										<div class="board_spec_title">[스마트패키지] "라틴의 꿈!" 파타고니아+남미5개국 26일 _ 엘 찰텐,비냐델마르 숙박</div>
+										<div class="board_spec_title">[스마트패키지] "라틴의 꿈!" 파타고니아+남미5개국 26일 _ 엘 찰텐,비냐델마르 숙박파타고니아+남미5개국 26일 _ 엘 찰텐,비냐델마르 숙박파타고니아+남미5개국 26일 _ 엘 찰텐,비냐델마르 숙박파타고니아+남미5개국 26일 _ 엘 찰텐,비냐델마르 숙박</div>
 										<div class="board_spec_sub_g">
 											<span class="board_spec_price">
 												<span class="price_num">13,399,000</span><span class="unit">원 ~</span>
@@ -548,7 +543,7 @@
 								<a href="#" class="board_thumnail_img_cols">
 									<img src="./images/sub/temp_350x220_02.jpg" alt="">
 									<span class="thum_layer">
-										<span clas="thum_label">남미<strong>27</strong>days</span>
+										<span class="thum_label"><span class="key">남미</span><strong class="emp">27</strong><span class="unit">days</span></span>
 									</span>
 								</a>
 								<div class="board_thumnail_spec_cols">
@@ -777,7 +772,7 @@
 								<a href="#" class="board_thumnail_img_cols">
 									<img src="./images/sub/temp_350x220_02.jpg" alt="">
 									<span class="thum_layer">
-										<span clas="thum_label">중미<strong>27</strong>days</span>
+										<span class="thum_label"><span class="key">중미</span><strong class="emp">27</strong><span class="unit">days</span></span>
 									</span>
 								</a>
 								<div class="board_thumnail_spec_cols">

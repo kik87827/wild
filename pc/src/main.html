@@ -82,6 +82,7 @@
 			<script>
 				document.addEventListener("DOMContentLoaded",() => {
 					mainVisual();
+					mc_swiper_func();
 				});
 
 				$(function(){
@@ -110,7 +111,6 @@
 						var getDate = start_date_div.datepicker("getDate");
 						var monthText = String(getDate.getMonth()).length == 1 ? `0${getDate.getMonth()}` : getDate.getMonth();
 						var dateText = String(getDate.getDate()).length == 1 ? `0${getDate.getDate()}` : getDate.getDate();
-						console.log(getDate.getMonth(),monthText,dateText);
 						date_div_parent.attr("data-date",getDate.getFullYear()+"-"+monthText+"-"+dateText)
 					}
 				})
@@ -121,9 +121,9 @@
 						<div class="mc_title_row"><p class="mc_title">오지투어 추천 프로그램</p></div>
 						<div class="mc_content_row">
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program01_01">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">리얼어드밴처</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">리얼어드밴처</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program01_01" class="btn_mc_small_box active">리얼어드밴처</a>
 										<a href="#program01_02" class="btn_mc_small_box">세미패키지</a>
@@ -133,14 +133,14 @@
 								<div class="mc_swiper_content_row">
 									<div class="multi_swiper_wrap">
 										<a href="#" class="btn_mc_control prev"><span class="hdtext">이전</span></a>
-										<div class="swiper-container multi_swiper" id="mc_tail_swiper_01_01">
+										<div class="swiper-container multi_swiper">
 											<div class="swiper-wrapper">
 												<div class="swiper-slide">
 													<a href="#" class="mc_thumbanner">
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
 															<span class="thum_layer">
-																<span clas="thum_label">아프리카<strong>27</strong>days</span>
+																<span class="thum_label"><span class="key">아프리카</span><strong class="emp">27</strong><span class="unit">days</span></span>
 															</span>
 														</div>
 														<div class="spec_rows">
@@ -163,7 +163,7 @@
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
 															<span class="thum_layer">
-																<span clas="thum_label">남미<strong>27</strong>days</span>
+																<span class="thum_label"><span class="key">남미</span><strong class="emp">27</strong><span class="unit">days</span></span>
 															</span>
 														</div>
 														<div class="spec_rows">
@@ -186,7 +186,7 @@
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
 															<span class="thum_layer">
-																<span clas="thum_label">중미<strong>27</strong>days</span>
+																<span class="thum_label"><span class="key">중미</span><strong class="emp">27</strong><span class="unit">days</span></span>
 															</span>
 														</div>
 														<div class="spec_rows">
@@ -209,7 +209,7 @@
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
 															<span class="thum_layer">
-																<span clas="thum_label">아프리카<strong>27</strong>days</span>
+																<span class="thum_label"><span class="key">아프리카</span><strong class="emp">27</strong><span class="unit">days</span></span>
 															</span>
 														</div>
 														<div class="spec_rows">
@@ -236,9 +236,9 @@
 							</div>
 							<!-- // -->
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program01_02">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">세미패키지</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">세미패키지</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program01_01" class="btn_mc_small_box">리얼어드밴처</a>
 										<a href="#program01_02" class="btn_mc_small_box active">세미패키지</a>
@@ -248,14 +248,14 @@
 								<div class="mc_swiper_content_row">
 									<div class="multi_swiper_wrap">
 										<a href="#" class="btn_mc_control prev"><span class="hdtext">이전</span></a>
-										<div class="swiper-container multi_swiper" id="mc_tail_swiper_01_02">
+										<div class="swiper-container multi_swiper">
 											<div class="swiper-wrapper">
 												<div class="swiper-slide">
 													<a href="#" class="mc_thumbanner">
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
 															<span class="thum_layer">
-																<span clas="thum_label">아프리카<strong>27</strong>days</span>
+																<span class="thum_label"><span class="key">아프리카</span><strong class="emp">27</strong><span class="unit">days</span></span>
 															</span>
 														</div>
 														<div class="spec_rows">
@@ -278,7 +278,7 @@
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
 															<span class="thum_layer">
-																<span clas="thum_label">남미<strong>27</strong>days</span>
+																<span class="thum_label"><span class="key">남미</span><strong class="emp">27</strong><span class="unit">days</span></span>
 															</span>
 														</div>
 														<div class="spec_rows">
@@ -301,7 +301,7 @@
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
 															<span class="thum_layer">
-																<span clas="thum_label">중미<strong>27</strong>days</span>
+																<span class="thum_label"><span class="key">중미</span><strong class="emp">27</strong><span class="unit">days</span></span>
 															</span>
 														</div>
 														<div class="spec_rows">
@@ -324,7 +324,7 @@
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
 															<span class="thum_layer">
-																<span clas="thum_label">아프리카<strong>27</strong>days</span>
+																<span class="thum_label"><span class="key">아프리카</span><strong class="emp">27</strong><span class="unit">days</span></span>
 															</span>
 														</div>
 														<div class="spec_rows">
@@ -351,9 +351,9 @@
 							</div>
 							<!-- // -->
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program01_03">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">스마트패키지</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">스마트패키지</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program01_01" class="btn_mc_small_box">리얼어드밴처</a>
 										<a href="#program01_02" class="btn_mc_small_box">세미패키지</a>
@@ -370,7 +370,7 @@
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
 															<span class="thum_layer">
-																<span clas="thum_label">아프리카<strong>27</strong>days</span>
+																<span class="thum_label"><span class="key">아프리카</span><strong class="emp">27</strong><span class="unit">days</span></span>
 															</span>
 														</div>
 														<div class="spec_rows">
@@ -393,7 +393,7 @@
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
 															<span class="thum_layer">
-																<span clas="thum_label">남미<strong>27</strong>days</span>
+																<span class="thum_label"><span class="key">남미</span><strong class="emp">27</strong><span class="unit">days</span></span>
 															</span>
 														</div>
 														<div class="spec_rows">
@@ -416,7 +416,7 @@
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
 															<span class="thum_layer">
-																<span clas="thum_label">중미<strong>27</strong>days</span>
+																<span class="thum_label"><span class="key">중미</span><strong class="emp">27</strong><span class="unit">days</span></span>
 															</span>
 														</div>
 														<div class="spec_rows">
@@ -439,7 +439,7 @@
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
 															<span class="thum_layer">
-																<span clas="thum_label">아프리카<strong>27</strong>days</span>
+																<span class="thum_label"><span class="key">아프리카</span><strong class="emp">27</strong><span class="unit">days</span></span>
 															</span>
 														</div>
 														<div class="spec_rows">
@@ -471,9 +471,9 @@
 						<div class="mc_title_row"><p class="mc_title">지역별 추천 상품</p></div>
 						<div class="mc_content_row">
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program02_01">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">남미</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">남미</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program02_01" class="btn_mc_small_box active">남미</a>
 										<a href="#program02_02" class="btn_mc_small_box">중미</a>
@@ -513,7 +513,7 @@
 															<img src="./images/main/temp_376x240.png" alt="">
 														</div>
 														<div class="spec_rows">
-															<span class="box_label boxtype2 bgtype5">출발예정</span>
+															<span class="box_label boxtype2 bgtype2">출발예정</span>
 															<div class="mc_spec_title">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
 															<div class="mc_spec_sub">
 																페루/볼리비아/칠레/아르헨티나/브라질
@@ -531,12 +531,9 @@
 													<a href="#" class="mc_thumbanner">
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
-															<span class="thum_layer">
-																<span clas="thum_label">중미<strong>27</strong>days</span>
-															</span>
 														</div>
 														<div class="spec_rows">
-															<span class="box_label boxtype2 bgtype5">출발예정</span>
+															<span class="box_label boxtype2 bgtype2">출발예정</span>
 															<div class="mc_spec_title">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
 															<div class="mc_spec_sub">
 																페루/볼리비아/칠레/아르헨티나/브라질
@@ -554,12 +551,9 @@
 													<a href="#" class="mc_thumbanner">
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
-															<span class="thum_layer">
-																<span clas="thum_label">중미<strong>27</strong>days</span>
-															</span>
 														</div>
 														<div class="spec_rows">
-															<span class="box_label boxtype2 bgtype5">출발예정</span>
+															<span class="box_label boxtype2 bgtype2">출발예정</span>
 															<div class="mc_spec_title">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
 															<div class="mc_spec_sub">
 																페루/볼리비아/칠레/아르헨티나/브라질
@@ -582,9 +576,9 @@
 							</div>
 							<!-- // -->
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program02_02">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">중미</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">중미</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program02_01" class="btn_mc_small_box">남미</a>
 										<a href="#program02_02" class="btn_mc_small_box active">중미</a>
@@ -624,7 +618,7 @@
 															<img src="./images/main/temp_376x240.png" alt="">
 														</div>
 														<div class="spec_rows">
-															<span class="box_label boxtype2 bgtype5">출발예정</span>
+															<span class="box_label boxtype2 bgtype2">출발예정</span>
 															<div class="mc_spec_title">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
 															<div class="mc_spec_sub">
 																페루/볼리비아/칠레/아르헨티나/브라질
@@ -642,12 +636,9 @@
 													<a href="#" class="mc_thumbanner">
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
-															<span class="thum_layer">
-																<span clas="thum_label">중미<strong>27</strong>days</span>
-															</span>
 														</div>
 														<div class="spec_rows">
-															<span class="box_label boxtype2 bgtype5">출발예정</span>
+															<span class="box_label boxtype2 bgtype2">출발예정</span>
 															<div class="mc_spec_title">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
 															<div class="mc_spec_sub">
 																페루/볼리비아/칠레/아르헨티나/브라질
@@ -665,12 +656,9 @@
 													<a href="#" class="mc_thumbanner">
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
-															<span class="thum_layer">
-																<span clas="thum_label">중미<strong>27</strong>days</span>
-															</span>
 														</div>
 														<div class="spec_rows">
-															<span class="box_label boxtype2 bgtype5">출발예정</span>
+															<span class="box_label boxtype2 bgtype2">출발예정</span>
 															<div class="mc_spec_title">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
 															<div class="mc_spec_sub">
 																페루/볼리비아/칠레/아르헨티나/브라질
@@ -693,9 +681,9 @@
 							</div>
 							<!-- // -->
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program02_03">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">아프리카</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">아프리카</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program02_01" class="btn_mc_small_box">남미</a>
 										<a href="#program02_02" class="btn_mc_small_box">중미</a>
@@ -735,7 +723,7 @@
 															<img src="./images/main/temp_376x240.png" alt="">
 														</div>
 														<div class="spec_rows">
-															<span class="box_label boxtype2 bgtype5">출발예정</span>
+															<span class="box_label boxtype2 bgtype2">출발예정</span>
 															<div class="mc_spec_title">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
 															<div class="mc_spec_sub">
 																페루/볼리비아/칠레/아르헨티나/브라질
@@ -753,12 +741,9 @@
 													<a href="#" class="mc_thumbanner">
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
-															<span class="thum_layer">
-																<span clas="thum_label">중미<strong>27</strong>days</span>
-															</span>
 														</div>
 														<div class="spec_rows">
-															<span class="box_label boxtype2 bgtype5">출발예정</span>
+															<span class="box_label boxtype2 bgtype2">출발예정</span>
 															<div class="mc_spec_title">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
 															<div class="mc_spec_sub">
 																페루/볼리비아/칠레/아르헨티나/브라질
@@ -776,12 +761,9 @@
 													<a href="#" class="mc_thumbanner">
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
-															<span class="thum_layer">
-																<span clas="thum_label">중미<strong>27</strong>days</span>
-															</span>
 														</div>
 														<div class="spec_rows">
-															<span class="box_label boxtype2 bgtype5">출발예정</span>
+															<span class="box_label boxtype2 bgtype2">출발예정</span>
 															<div class="mc_spec_title">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
 															<div class="mc_spec_sub">
 																페루/볼리비아/칠레/아르헨티나/브라질
@@ -804,9 +786,9 @@
 							</div>
 							<!-- // -->
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program02_04">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">유럽</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">유럽</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program02_01" class="btn_mc_small_box">남미</a>
 										<a href="#program02_02" class="btn_mc_small_box">중미</a>
@@ -846,7 +828,7 @@
 															<img src="./images/main/temp_376x240.png" alt="">
 														</div>
 														<div class="spec_rows">
-															<span class="box_label boxtype2 bgtype5">출발예정</span>
+															<span class="box_label boxtype2 bgtype2">출발예정</span>
 															<div class="mc_spec_title">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
 															<div class="mc_spec_sub">
 																페루/볼리비아/칠레/아르헨티나/브라질
@@ -864,12 +846,9 @@
 													<a href="#" class="mc_thumbanner">
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
-															<span class="thum_layer">
-																<span clas="thum_label">중미<strong>27</strong>days</span>
-															</span>
 														</div>
 														<div class="spec_rows">
-															<span class="box_label boxtype2 bgtype5">출발예정</span>
+															<span class="box_label boxtype2 bgtype2">출발예정</span>
 															<div class="mc_spec_title">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
 															<div class="mc_spec_sub">
 																페루/볼리비아/칠레/아르헨티나/브라질
@@ -887,12 +866,9 @@
 													<a href="#" class="mc_thumbanner">
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
-															<span class="thum_layer">
-																<span clas="thum_label">중미<strong>27</strong>days</span>
-															</span>
 														</div>
 														<div class="spec_rows">
-															<span class="box_label boxtype2 bgtype5">출발예정</span>
+															<span class="box_label boxtype2 bgtype2">출발예정</span>
 															<div class="mc_spec_title">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
 															<div class="mc_spec_sub">
 																페루/볼리비아/칠레/아르헨티나/브라질
@@ -915,9 +891,9 @@
 							</div>
 							<!-- // -->
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program02_05">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">코카서스</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">코카서스</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program02_01" class="btn_mc_small_box">남미</a>
 										<a href="#program02_02" class="btn_mc_small_box">중미</a>
@@ -957,7 +933,7 @@
 															<img src="./images/main/temp_376x240.png" alt="">
 														</div>
 														<div class="spec_rows">
-															<span class="box_label boxtype2 bgtype5">출발예정</span>
+															<span class="box_label boxtype2 bgtype2">출발예정</span>
 															<div class="mc_spec_title">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
 															<div class="mc_spec_sub">
 																페루/볼리비아/칠레/아르헨티나/브라질
@@ -975,12 +951,9 @@
 													<a href="#" class="mc_thumbanner">
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
-															<span class="thum_layer">
-																<span clas="thum_label">중미<strong>27</strong>days</span>
-															</span>
 														</div>
 														<div class="spec_rows">
-															<span class="box_label boxtype2 bgtype5">출발예정</span>
+															<span class="box_label boxtype2 bgtype2">출발예정</span>
 															<div class="mc_spec_title">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
 															<div class="mc_spec_sub">
 																페루/볼리비아/칠레/아르헨티나/브라질
@@ -998,12 +971,9 @@
 													<a href="#" class="mc_thumbanner">
 														<div class="thum_rows">
 															<img src="./images/main/temp_376x240.png" alt="">
-															<span class="thum_layer">
-																<span clas="thum_label">중미<strong>27</strong>days</span>
-															</span>
 														</div>
 														<div class="spec_rows">
-															<span class="box_label boxtype2 bgtype5">출발예정</span>
+															<span class="box_label boxtype2 bgtype2">출발예정</span>
 															<div class="mc_spec_title">[리얼배낭] REAL 스페인, 포르투갈, 모로코 31일</div>
 															<div class="mc_spec_sub">
 																페루/볼리비아/칠레/아르헨티나/브라질
@@ -1040,14 +1010,14 @@
 						<div class="mc_both_content_fxwrap">
 							<div class="mc_both_content_long">
 								<a href="#" class="data_boxcard">
-									<div class="data_boxcard_title">아, 되돌아보게 하는 매혹의 땅 코카서스!</div>
+									<div class="data_boxcard_title"><div class="data_boxcard_title_inner">아, 되돌아보게 하는 매혹의 땅 코카서스!</div></div>
 									<div class="data_boxcard_content">
 										<div class="data_boxcard_text">여행과 변화를 사랑하는 사람은 생명을 가진 사람이라고 바그너는 말했다. 오랜 기간 코로나19로 인해 미증여행과 변화를 사랑하는 사람은 생명을 가진 사람이라고 바그너는 말했다. 오랜 기간 코로나19로 인해 미증</div>
 										<div class="data_boxcard_thum"><img src="./images/main/temp_90x90.png" alt=""></div>
 									</div>
 								</a>
 								<a href="#" class="data_boxcard">
-									<div class="data_boxcard_title">인생은 아름다워~쿠나팀장과 함께 한 남미 253차</div>
+									<div class="data_boxcard_title"><div class="data_boxcard_title_inner">인생은 아름다워~쿠나팀장과 함께 한 남미 253차</div></div>
 									<div class="data_boxcard_content">
 										<div class="data_boxcard_text">여행과 변화를 사랑하는 사람은 생명을 가진 사람이라고 바그너는 말했다. 오랜 기간 코로나19로 인해 미증여행과 변화를 사랑하는 사람은 생명을 가진 사람이라고 바그너는 말했다. 오랜 기간 코로나19로 인해 미증</div>
 										<div class="data_boxcard_thum"><img src="./images/main/temp_90x90_2.png" alt=""></div>
@@ -1055,9 +1025,15 @@
 								</a>
 							</div>
 							<div class="mc_both_content_short">
-								<a href="#" class="data_boxcard">
+								<a href="#" class="data_boxcard flex_type">
 									<div class="data_boxspec_group">
-										<div class="data_boxspec_01">“진오”</div>
+										<div class="data_boxspec_01_g">
+											<div class="data_boxspec_01">
+												<span class="data_open_text">“</span>
+												<span class="data_boxspec_name">진오</span>
+												<span class="data_close_text">”</span>
+											</div>
+										</div>
 										<div class="data_boxspec_02">
 											도전과 모험을 즐기고, 누구보다 여행을 사랑하는인솔자!<br>현지인보다 더 현지인 같은 그의 이번 여행이 궁금하다 클릭! 
 										</div>

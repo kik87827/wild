@@ -5,6 +5,7 @@ let touchstart = "ontouchstart" in window;
 let userAgent=navigator.userAgent.toLowerCase();
 document.addEventListener("DOMContentLoaded",() => {
 	layoutFunc();
+	mcFunc();
 });
 window.addEventListener("load",() => {
 	
@@ -13,6 +14,10 @@ $(window).on("load",function(){
 	commonResize();
 	posLayerEvent();
 });
+
+function mcFunc(){
+	document.querySelector("html").classList.add("smooth");
+}
 
 function commonResize(){
 	var $window_width = 0;
@@ -87,6 +92,7 @@ function layoutFunc(){
 function mainVisual(){
 	let main_visual_obj = null;
 	const main_visual_container = document.querySelector(".mv_container");
+	const mv_zone = document.querySelector(".mv_zone");
 	const main_visual_slide = main_visual_container.querySelectorAll(".swiper-slide");
 	let btn_mv_stop = null;
 	let btn_mv_play = null;
@@ -123,6 +129,8 @@ function mainVisual(){
 			e.preventDefault();
 			main_visual_obj.autoplay.stop();
 		},false);
+	}else{
+		mv_zone.classList.add("nodata_type");
 	}
 }
 
@@ -254,4 +262,59 @@ function posLayerResizeAction(target){
 function posLayerHide(target){
 	var target = $(target) || target;
 	target.removeClass("active");
+}
+
+
+
+// mc swiper
+function mc_swiper_func(){
+	let mc_swiper_loof_item = document.querySelectorAll(".mc_swiper_loof_item");
+
+	mc_swiper_loof_item.forEach((element,index)=>{
+		let thisID = element.getAttribute("id");
+		let thisSwiper = element.querySelector(".multi_swiper_wrap");
+		let mc_tail_slide = thisSwiper.querySelectorAll(".swiper-slide");
+
+		if(mc_tail_slide.length>1){
+			new Function(`
+				${thisID} = new Swiper('#${thisID} .multi_swiper', { 
+					speed : 1000, 
+					slidesPerView: 3, 
+					slidesPerGroup: 3, 
+					loop : true, 
+					navigation: { 
+						nextEl: '#${thisID} .btn_mc_control.next', 
+						prevEl: '#${thisID} .btn_mc_control.prev'
+					},
+					pagination: {  
+						el: "#${thisID} .swiper_paging",
+						clickable: true
+					}
+				})`
+			)()
+		}else{
+			document.querySelector(`#${thisID}`).classList.add("nodata_type");
+		}
+	});
+}
+
+// sc swiper
+function subEmpSwiper(){
+	let emp_swiper = document.querySelector(".emp_swiper");
+	let emp_swiper_slide = document.querySelectorAll(".emp_swiper .swiper-slide");
+
+	if(emp_swiper_slide.length>1){
+		main_visual_obj = new Swiper(".emp_swiper", {
+			speed : 1500,
+			slidesPerView: 4, 
+			slidesPerGroup: 4, 
+			loop : true,
+			autoplay: {
+				delay: 3500,
+				disableOnInteraction: false
+			}
+		});
+	}else{
+		emp_swiper.classList.add("nodata_type");
+	}
 }

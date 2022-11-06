@@ -36,8 +36,8 @@
 .mv_control_paging .swiper-pagination-bullet.swiper-pagination-bullet-active{opacity:1;background:#046ec2;}
 
 
-.mc_wrap{}
-.mc_row{}
+.mc_wrap{padding-top:57px;}
+.mc_row{margin-bottom:85px;}
 .mc_row:nth-of-type(2n){}
 .mc_row:last-of-type{}
 .mc_row.mc_cha_link_wrap{}

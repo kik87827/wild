@@ -10,59 +10,61 @@
 				<a href="javascript:;" class="btn_mv_control prev_control"><span class="hdtext">이전</span></a>
 				<div class="swiper-container mv_container">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<a href="#" class="mv_item" style="background-image:url(./images/main/mv_sample01.jpg)"></a>
-						</div>
-						<div class="swiper-slide">
-							<a href="#" class="mv_item" style="background-image:url(./images/main/mv_sample02.jpg)"></a>
+						<div class="swiper-nodata">
+							<p class="nodata_para">데이터가 없습니다.</p>
 						</div>
 					</div>
 				</div>
 				<a href="javascript:;" class="btn_mv_control next_control"><span class="hdtext">다음</span></a>
 				<div class="mv_bottom_control_wrap">
-					<div class="mv_bottom_cols has_navi">
-						<div class="swiper-pagination main_visual_paging">
+					<div class="mv_bottom_in_control">
+						<div class="mv_bottom_cols has_navi">
+							<div class="swiper-pagination main_visual_paging">
+							</div>
 						</div>
-					</div>
-					<div class="mv_bottom_cols has_auto">
-						<ul class="swiper_auto_control_list">
-							<li><a href="#" class="btn_mv_stop"><span class="hdtext">정지</span></a></li>
-							<li><a href="#" class="btn_mv_play"><span class="hdtext">재생</span></a></li>
-						</ul>
+						<div class="mv_bottom_cols has_auto">
+							<ul class="swiper_auto_control_list">
+								<li><a href="#" class="btn_mv_play"><span class="hdtext">재생</span></a></li>
+								<li><a href="#" class="btn_mv_stop"><span class="hdtext">정지</span></a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<div class="mvlayer_parent">
 					<div class="search_field_wrap">
-						<div class="search_field_cols define_local">
-							<a href="#" class="search_field_form" data-layerTarget="#layer_box_01">
+						<a href="#" class="search_field_cols define_local" id="local_target" data-poslayer="#layer_box_01">
+							<div class="search_field_form">
 								<div class="search_form_label">지역</div>
 								<div class="search_form_text_g">
 									<div class="search_form_text_place">어디로 가세요?</div>
 									<div class="search_form_text_result"></div>
 								</div>
-							</a>
-						</div>
-						<div class="search_field_cols define_theme">
-							<a href="#" class="search_field_form" data-layerTarget="#layer_box_02">
+							</div>
+						</a>
+						<a href="#" class="search_field_cols define_theme" id="theme_target" data-poslayer="#layer_box_02">
+							<div class="search_field_form">
 								<div class="search_form_label">테마</div>
 								<div class="search_form_text_g">
 									<div class="search_form_text_place">취향에 맞는 상품을 원하세요?</div>
 									<div class="search_form_text_result"></div>
 								</div>
-							</a>
-						</div>
-						<div class="search_field_cols define_start">
-							<a href="#" class="search_field_form">
+							</div>
+						</a>
+						<a href="#" class="search_field_cols define_start" id="start_target" data-poslayer="#layer_box_03">
+							<div class="search_field_form">
 								<div class="search_form_label">출발일</div>
 								<div class="search_form_text_g">
-									<input type="text" class="input_search_form" placeholder="날짜를 입력하세요">
+									<div class="search_form_text_place">날짜를 입력하세요</div>
+									<div class="search_form_text_result"></div>
 								</div>
-							</a>
-						</div>
+							</div>
+						</a>
 						<div class="search_field_cols define_search">
 							<div class="search_field_form">
 								<p class="search_form_label">검색어</p>
-								<input type="text" class="input_search_form" placeholder="검색어를 입력해주세요">
+								<div class="search_form_text_g">
+									<input type="text" class="input_search_form" placeholder="검색어를 입력해주세요">
+								</div>
 							</div>
 						</div>
 						<div class="search_field_cols define_btn">
@@ -71,15 +73,51 @@
 					</div>
 				</div>
 			</div>
+			<script>
+				document.addEventListener("DOMContentLoaded",() => {
+					mainVisual();
+					mc_swiper_func();
+				});
+
+				$(function(){
+					var start_date_div = $("#start_date_div");
+					var date_div_parent = start_date_div.parents(".poslayer_z"); 
+					// 픽업 레이어 달력
+					start_date_div.datepicker({
+						beforeShow: function () {
+							start_date_div.find(".ui-datepicker-next , .ui-datepicker-prev").addClass("layer_in_control");
+							parentDateUpdate();
+						},
+						onSelect: function () {
+							start_date_div.find(".ui-datepicker-next , .ui-datepicker-prev").addClass("layer_in_control");
+							parentDateUpdate();
+						},
+						onChangeMonthYear: function () {
+							start_date_div.find(".ui-datepicker-next , .ui-datepicker-prev").addClass("layer_in_control");
+							parentDateUpdate();
+						}
+					});
+					start_date_div.find(".ui-datepicker-next , .ui-datepicker-prev").addClass("layer_in_control");
+					parentDateUpdate();
+					
+
+					function parentDateUpdate(){
+						var getDate = start_date_div.datepicker("getDate");
+						var monthText = String(getDate.getMonth()).length == 1 ? `0${getDate.getMonth()}` : getDate.getMonth();
+						var dateText = String(getDate.getDate()).length == 1 ? `0${getDate.getDate()}` : getDate.getDate();
+						date_div_parent.attr("data-date",getDate.getFullYear()+"-"+monthText+"-"+dateText)
+					}
+				})
+			</script>
 			<div class="mc_zone">
 				<div class="mc_inpix">
 					<div class="mc_row">
 						<div class="mc_title_row"><p class="mc_title">오지투어 추천 프로그램</p></div>
 						<div class="mc_content_row">
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program01_01">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">리얼어드밴처</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">리얼어드밴처</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program01_01" class="btn_mc_small_box active">리얼어드밴처</a>
 										<a href="#program01_02" class="btn_mc_small_box">세미패키지</a>
@@ -89,9 +127,11 @@
 								<div class="mc_swiper_content_row">
 									<div class="multi_swiper_wrap">
 										<a href="#" class="btn_mc_control prev"><span class="hdtext">이전</span></a>
-										<div class="swiper-container multi_swiper" id="mc_tail_swiper_01_01">
+										<div class="swiper-container multi_swiper">
 											<div class="swiper-wrapper">
-												<div class="swiper-nodata">데이터가 없습니다.</div>
+												<div class="swiper-nodata">
+													<p class="nodata_para">데이터가 없습니다.</p>
+												</div>
 											</div>
 											<div class="swiper_paging"></div>
 										</div>
@@ -101,9 +141,9 @@
 							</div>
 							<!-- // -->
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program01_02">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">세미패키지</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">세미패키지</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program01_01" class="btn_mc_small_box">리얼어드밴처</a>
 										<a href="#program01_02" class="btn_mc_small_box active">세미패키지</a>
@@ -113,9 +153,11 @@
 								<div class="mc_swiper_content_row">
 									<div class="multi_swiper_wrap">
 										<a href="#" class="btn_mc_control prev"><span class="hdtext">이전</span></a>
-										<div class="swiper-container multi_swiper" id="mc_tail_swiper_01_02">
+										<div class="swiper-container multi_swiper">
 											<div class="swiper-wrapper">
-												<div class="swiper-nodata">데이터가 없습니다.</div>
+												<div class="swiper-nodata">
+													<p class="nodata_para">데이터가 없습니다.</p>
+												</div>
 											</div>
 											<div class="swiper_paging"></div>
 										</div>
@@ -125,9 +167,9 @@
 							</div>
 							<!-- // -->
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program01_03">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">스마트패키지</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">스마트패키지</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program01_01" class="btn_mc_small_box">리얼어드밴처</a>
 										<a href="#program01_02" class="btn_mc_small_box">세미패키지</a>
@@ -139,7 +181,9 @@
 										<a href="#" class="btn_mc_control prev"><span class="hdtext">이전</span></a>
 										<div class="swiper-container multi_swiper" id="mc_tail_swiper_01_03">
 											<div class="swiper-wrapper">
-												<div class="swiper-nodata">데이터가 없습니다.</div>
+												<div class="swiper-nodata">
+													<p class="nodata_para">데이터가 없습니다.</p>
+												</div>
 											</div>
 											<div class="swiper_paging"></div>
 										</div>
@@ -154,9 +198,9 @@
 						<div class="mc_title_row"><p class="mc_title">지역별 추천 상품</p></div>
 						<div class="mc_content_row">
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program02_01">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">남미</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">남미</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program02_01" class="btn_mc_small_box active">남미</a>
 										<a href="#program02_02" class="btn_mc_small_box">중미</a>
@@ -170,7 +214,9 @@
 										<a href="#" class="btn_mc_control prev"><span class="hdtext">이전</span></a>
 										<div class="swiper-container multi_swiper" id="mc_tail_swiper_02_01">
 											<div class="swiper-wrapper">
-												<div class="swiper-nodata">데이터가 없습니다.</div>
+												<div class="swiper-nodata">
+													<p class="nodata_para">데이터가 없습니다.</p>
+												</div>
 											</div>
 											<div class="swiper_paging"></div>
 										</div>
@@ -180,9 +226,9 @@
 							</div>
 							<!-- // -->
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program02_02">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">중미</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">중미</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program02_01" class="btn_mc_small_box">남미</a>
 										<a href="#program02_02" class="btn_mc_small_box active">중미</a>
@@ -196,7 +242,9 @@
 										<a href="#" class="btn_mc_control prev"><span class="hdtext">이전</span></a>
 										<div class="swiper-container multi_swiper" id="mc_tail_swiper_02_02">
 											<div class="swiper-wrapper">
-												<div class="swiper-nodata">데이터가 없습니다.</div>
+												<div class="swiper-nodata">
+													<p class="nodata_para">데이터가 없습니다.</p>
+												</div>
 											</div>
 											<div class="swiper_paging"></div>
 										</div>
@@ -206,9 +254,9 @@
 							</div>
 							<!-- // -->
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program02_03">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">아프리카</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">아프리카</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program02_01" class="btn_mc_small_box">남미</a>
 										<a href="#program02_02" class="btn_mc_small_box">중미</a>
@@ -222,7 +270,9 @@
 										<a href="#" class="btn_mc_control prev"><span class="hdtext">이전</span></a>
 										<div class="swiper-container multi_swiper" id="mc_tail_swiper_02_03">
 											<div class="swiper-wrapper">
-												<div class="swiper-nodata">데이터가 없습니다.</div>
+												<div class="swiper-nodata">
+													<p class="nodata_para">데이터가 없습니다.</p>
+												</div>
 											</div>
 											<div class="swiper_paging"></div>
 										</div>
@@ -232,9 +282,9 @@
 							</div>
 							<!-- // -->
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program02_04">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">유럽</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">유럽</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program02_01" class="btn_mc_small_box">남미</a>
 										<a href="#program02_02" class="btn_mc_small_box">중미</a>
@@ -248,7 +298,9 @@
 										<a href="#" class="btn_mc_control prev"><span class="hdtext">이전</span></a>
 										<div class="swiper-container multi_swiper" id="mc_tail_swiper_02_04">
 											<div class="swiper-wrapper">
-												<div class="swiper-nodata">데이터가 없습니다.</div>
+												<div class="swiper-nodata">
+													<p class="nodata_para">데이터가 없습니다.</p>
+												</div>
 											</div>
 											<div class="swiper_paging"></div>
 										</div>
@@ -258,9 +310,9 @@
 							</div>
 							<!-- // -->
 							<!--  -->
-							<div class="mc_swiper_loof_item">
+							<div class="mc_swiper_loof_item" id="program02_05">
 								<div class="mc_swiper_title_row">
-									<div class="mc_swiper_title_wrap"><p clas="mc_swiper_title">코카서스</p></div>
+									<div class="mc_swiper_title_wrap"><p class="mc_swiper_title">코카서스</p></div>
 									<div class="mc_swiper_title_util_group">
 										<a href="#program02_01" class="btn_mc_small_box">남미</a>
 										<a href="#program02_02" class="btn_mc_small_box">중미</a>
@@ -274,7 +326,9 @@
 										<a href="#" class="btn_mc_control prev"><span class="hdtext">이전</span></a>
 										<div class="swiper-container multi_swiper" id="mc_tail_swiper_02_05">
 											<div class="swiper-wrapper">
-												<div class="swiper-nodata">데이터가 없습니다.</div>
+												<div class="swiper-nodata">
+													<p class="nodata_para">데이터가 없습니다.</p>
+												</div>
 											</div>
 											<div class="swiper_paging"></div>
 										</div>
@@ -297,33 +351,10 @@
 						</div>
 						<div class="mc_both_content_fxwrap">
 							<div class="mc_both_content_long">
-								<a href="#" class="data_boxcard">
-									<div class="data_boxcard_title">아, 되돌아보게 하는 매혹의 땅 코카서스!</div>
-									<div class="data_boxcard_content">
-										<div class="data_boxcard_text">여행과 변화를 사랑하는 사람은 생명을 가진 사람이라고 바그너는 말했다. 오랜 기간 코로나19로 인해 미증여행과 변화를 사랑하는 사람은 생명을 가진 사람이라고 바그너는 말했다. 오랜 기간 코로나19로 인해 미증</div>
-										<div class="data_boxcard_thum"><img src="./images/main/temp_90x90.png" alt=""></div>
-									</div>
-								</a>
-								<a href="#" class="data_boxcard">
-									<div class="data_boxcard_title">인생은 아름다워~쿠나팀장과 함께 한 남미 253차</div>
-									<div class="data_boxcard_content">
-										<div class="data_boxcard_text">여행과 변화를 사랑하는 사람은 생명을 가진 사람이라고 바그너는 말했다. 오랜 기간 코로나19로 인해 미증여행과 변화를 사랑하는 사람은 생명을 가진 사람이라고 바그너는 말했다. 오랜 기간 코로나19로 인해 미증</div>
-										<div class="data_boxcard_thum"><img src="./images/main/temp_90x90_2.png" alt=""></div>
-									</div>
-								</a>
+								<p class="nodata_para">데이터가 없습니다.</p>
 							</div>
 							<div class="mc_both_content_short">
-								<a href="#" class="data_boxcard">
-									<div class="data_boxspec_group">
-										<div class="data_boxspec_01">“진오”</div>
-										<div class="data_boxspec_02">
-											도전과 모험을 즐기고, 누구보다 여행을 사랑하는인솔자!<br>현지인보다 더 현지인 같은 그의 이번 여행이 궁금하다 클릭! 
-										</div>
-									</div>
-									<div class="data_boxflame_g">
-										<img src="./images/main/photo_flame_img.png" alt="">
-									</div>
-								</a>
+								<p class="nodata_para">데이터가 없습니다.</p>
 							</div>
 						</div>
 					</div>
@@ -342,7 +373,7 @@
 									</ul>
 								</div>
 							</div>
-							<div class="mc_guide_card">
+							<div class="mc_guide_card type2">
 								<div class="mc_guide_spec_group">
 									<p class="mc_guide_spec_title">BANK INFO</p>
 									<div class="mc_guide_spec_dl">
@@ -360,35 +391,65 @@
 		<!-- // middle -->
 		@@include('./include/footer.html')
 		<!-- layer -->
-		<div class="layer_box_wrap" id="layer_box_01">
-			<div class="layer_title_row"><p class="layer_title">지역선택</p></div>
-			<div class="layer_content_row">
-				<ul class="text_choice_list">
-					<li><a href="#" class="text_choice">남미</a></li>
-					<li><a href="#" class="text_choice">중미</a></li>
-					<li><a href="#" class="text_choice">아프리카</a></li>
-					<li><a href="#" class="text_choice">유럽</a></li>
-				</ul>
-			</div>
-			<div calss="layer_btns_row">
-				<a href="#" class="btn_layer_submit">선택</a>
-			</div>
-			<a href="#" class="btn_layer_box_close"><span class="hdtext">닫기</span></a>
-		</div>
-		<div class="layer_box_wrap" id="layer_box_02">
-			<div class="layer_title_row"><p class="layer_title">테마선택</p></div>
-			<div class="layer_content_row">
-				<ul class="text_choice_list">
-					<li><a href="#" class="text_choice">세미팩</a></li>
-					<li><a href="#" class="text_choice">스마트패키지</a></li>
-					<li><a href="#" class="text_choice">어드밴쳐</a></li>
-				</ul>
-			</div>
-			<div calss="layer_btns_row">
-				<a href="#" class="btn_layer_submit">선택</a>
-			</div>
-			<a href="#" class="btn_layer_box_close"><span class="hdtext">닫기</span></a>
-		</div>
+		<div class="poslayer_z" id="layer_box_01">
+            <div class="poslayer_titlow">
+                <p class="poslayer_tit">지역선택</p>
+            </div>
+            <div class="poslayer_contlow">
+                <div class="pcont_w">
+                    <div class="pclayer_scr_w">
+                        <ul class="pclayer_vlist">
+                            <li><a href="javascript:;" class="pcv_chk">남미</a></li>
+                            <li><a href="javascript:;" class="pcv_chk">중미</a></li>
+                            <li><a href="javascript:;" class="pcv_chk">아프리카</a></li>
+                            <li><a href="javascript:;" class="pcv_chk">유럽</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn_psubmit_w">
+                    <a href="#" class="btn_psubmit">적용</a>
+                </div>
+            </div>
+            <button type="button" class="layerclose"><span class="hdtext">닫기</span></button>
+        </div>
+
+		<div class="poslayer_z" id="layer_box_02">
+            <div class="poslayer_titlow">
+                <p class="poslayer_tit">테마선택</p>
+            </div>
+            <div class="poslayer_contlow">
+                <div class="pcont_w">
+                    <div class="pclayer_scr_w">
+                        <ul class="pclayer_vlist">
+                            <li><a href="#" class="pcv_chk">세미팩</a></li>
+                            <li><a href="#" class="pcv_chk">스마트패키지</a></li>
+                            <li><a href="#" class="pcv_chk">어드밴쳐</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn_psubmit_w">
+                    <a href="#" class="btn_psubmit">적용</a>
+                </div>
+            </div>
+            <button type="button" class="layerclose"><span class="hdtext">닫기</span></button>
+        </div>
+		
+		<div class="poslayer_z wtype2" id="layer_box_03">
+            <div class="poslayer_titlow">
+                <p class="poslayer_tit">출발일 선택</p>
+            </div>
+            <div class="poslayer_contlow">
+                <div class="pcont_w">
+                    <div class="insert_date_parent" id="start_date_div">
+
+					</div>
+                </div>
+                <div class="btn_psubmit_w">
+                    <a href="#" class="btn_psubmit">적용</a>
+                </div>
+            </div>
+            <button type="button" class="layerclose"><span class="hdtext">닫기</span></button>
+        </div>
 		<!-- // layer -->
 	</div>
 </body>

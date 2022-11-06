@@ -90,9 +90,9 @@ html.smooth {scroll-behavior: smooth;}
 .gnb_list > li:last-of-type{}
 .gnb_one{display:inline-block;color:#1f1f1f;line-height:1;font-size:18px;font-weight:500;}
 .gnb_one:hover{color:#016cbc;}
-.btn_gnb_utilbox{flex:0;display:flex;border:1px solid #727272;border-radius:100px;align-items: center;text-align: center;padding:8px 18px;}
+.btn_gnb_utilbox{flex:0;display:flex;border:1px solid #006abc;border-radius:100px;align-items: center;text-align: center;padding:8px 18px;background:#006abc;}
 .btn_gnb_utilbox:before{display:block;content:'';width:18px;height:18px;background:url("../images/common/ico_fly.png") no-repeat 0 0;}
-.btn_gnb_utilbox_intext{display:inline-block;white-space: nowrap;color:#1f1f1f;font-size:15px;font-weight:500;margin-left:5px;}
+.btn_gnb_utilbox_intext{display:inline-block;white-space: nowrap;color:#fff;font-size:15px;font-weight:500;margin-left:5px;}
 
 .global_total_ico_wrap{flex:0 0 36px;display:flex;width:36px;height:24px;align-items: center;}
 .global_total_ico{display:block;height:2px;background:#000;position:relative;width:36px;}
@@ -116,6 +116,12 @@ html.smooth {scroll-behavior: smooth;}
 .sns_item.sns_insta{background-position:0 75%;}
 .sns_item.sns_face{background-position:0 100%;}
 
+.middle_title_row{padding:40px 0;text-align: center;}
+.middle_title{font-size:26px;color:#2b2b2b;line-height:1;font-weight:500;}
+.middle_pixin{width:1200px;margin:0 auto 120px;}
+.middle_search_field_row{margin-bottom:80px;}
+.middle_search_field_row .search_field_wrap{position:static;transform: none;}
+
 
 .footer_main_low{background:#282828;}
 .layout_pixin{width:1200px;margin:0 auto;padding:40px 0;}
@@ -135,7 +141,7 @@ html.smooth {scroll-behavior: smooth;}
 .footer_copyitem{display:inline-block;font-size:13px;line-height:1;color:#fff;opacity:.35;}
 .footer_copyright{margin-top:28px;font-size:12px;color:#fff;opacity:.52;}
 .btn_gotop_row{position:absolute;top:0;left:50%;width:1200px;z-index:20;height:0;transform: translateX(-50%);}
-.btn_gotop_row.type2{top:-20px;}
+.btn_gotop_row.type2{top:-50px;}
 .btn_gotop{display:inline-block;width:58px;height:58px;border:1px solid #cacaca;border-radius:100%;background:#fff;position:absolute;top:50%;right:-75px;transform: translateY(-50%);}
 .btn_gotop:after{display:block;content:'';width:17px;height:17px;border-right:2px solid #292929;border-bottom:2px solid #292929;
     transform: translateZ(0) rotate(225deg);position:absolute;top:24px;left:20px;

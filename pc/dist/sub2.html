@@ -101,86 +101,103 @@
 				<div class="swiper-container mv_container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<a href="#" class="mv_item" style="background-image:url(./images/main/mv_sample01.jpg)"></a>
+							<a href="#" class="mv_item" style="background-image:url(./images/main/main_visual_01.jpg)"></a>
 						</div>
 						<div class="swiper-slide">
-							<a href="#" class="mv_item" style="background-image:url(./images/main/mv_sample02.jpg)"></a>
+							<a href="#" class="mv_item" style="background-image:url(./images/main/main_visual_02.jpg)"></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="mv_item" style="background-image:url(./images/main/main_visual_03.jpg)"></a>
 						</div>
 					</div>
 				</div>
 				<a href="javascript:;" class="btn_mv_control next_control"><span class="hdtext">다음</span></a>
-				<div class="mv_bottom_control_wrap">
-					<div class="mv_bottom_cols has_navi">
-						<div class="swiper-pagination main_visual_paging">
-						</div>
-					</div>
-					<div class="mv_bottom_cols has_auto">
-						<ul class="swiper_auto_control_list">
-							<li><a href="#" class="btn_mv_stop"><span class="hdtext">정지</span></a></li>
-							<li><a href="#" class="btn_mv_play"><span class="hdtext">재생</span></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="mvlayer_parent">
-					<div class="search_field_wrap">
-						<div class="search_field_cols define_local">
-							<a href="#" class="search_field_form" data-layerTarget="#layer_box_01">
-								<div class="search_form_label">지역</div>
-								<div class="search_form_text_g">
-									<div class="search_form_text_place">어디로 가세요?</div>
-									<div class="search_form_text_result"></div>
-								</div>
-							</a>
-						</div>
-						<div class="search_field_cols define_theme">
-							<a href="#" class="search_field_form" data-layerTarget="#layer_box_02">
-								<div class="search_form_label">테마</div>
-								<div class="search_form_text_g">
-									<div class="search_form_text_place">취향에 맞는 상품을 원하세요?</div>
-									<div class="search_form_text_result"></div>
-								</div>
-							</a>
-						</div>
-						<div class="search_field_cols define_start">
-							<a href="#" class="search_field_form">
-								<div class="search_form_label">출발일</div>
-								<div class="search_form_text_g">
-									<input type="text" class="input_search_form" placeholder="날짜를 입력하세요">
-								</div>
-							</a>
-						</div>
-						<div class="search_field_cols define_search">
-							<div class="search_field_form">
-								<p class="search_form_label">검색어</p>
-								<input type="text" class="input_search_form" placeholder="검색어를 입력해주세요">
+				<div class="mv_bottom_control_wrap type2">
+					<div class="mv_bottom_in_control">
+						<div class="mv_bottom_cols has_navi">
+							<div class="swiper-pagination main_visual_paging">
 							</div>
 						</div>
-						<div class="search_field_cols define_btn">
-							<a href="#" class="btn_search_form"><span class="hdtext">검색</span></a>
+						<div class="mv_bottom_cols has_auto">
+							<ul class="swiper_auto_control_list">
+								<li><a href="#" class="btn_mv_play"><span class="hdtext">재생</span></a></li>
+								<li><a href="#" class="btn_mv_stop"><span class="hdtext">정지</span></a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
+			<script>
+				document.addEventListener("DOMContentLoaded", () => {
+					mainVisual();
+					mc_swiper_func();
+				});
+
+				$(function() {
+					var start_date_div = $("#start_date_div");
+					var date_div_parent = start_date_div.parents(".poslayer_z");
+					// 픽업 레이어 달력
+					start_date_div.datepicker({
+						beforeShow: function() {
+							start_date_div.find(".ui-datepicker-next , .ui-datepicker-prev").addClass("layer_in_control");
+							parentDateUpdate();
+						},
+						onSelect: function() {
+							start_date_div.find(".ui-datepicker-next , .ui-datepicker-prev").addClass("layer_in_control");
+							parentDateUpdate();
+						},
+						onChangeMonthYear: function() {
+							start_date_div.find(".ui-datepicker-next , .ui-datepicker-prev").addClass("layer_in_control");
+							parentDateUpdate();
+						}
+					});
+					start_date_div.find(".ui-datepicker-next , .ui-datepicker-prev").addClass("layer_in_control");
+					parentDateUpdate();
+
+
+					function parentDateUpdate() {
+						var getDate = start_date_div.datepicker("getDate");
+						var monthText = String(getDate.getMonth()).length == 1 ? `0${getDate.getMonth()}` : getDate.getMonth();
+						var dateText = String(getDate.getDate()).length == 1 ? `0${getDate.getDate()}` : getDate.getDate();
+						date_div_parent.attr("data-date", getDate.getFullYear() + "-" + monthText + "-" + dateText)
+					}
+				})
+			</script>
 			<div class="subcontent_wrap">
 				<p class="sc_content_title">테마로 만나는 남미여행</p>
 				<div class="sc_boxtab_list_wrap">
 					<ul class="sc_boxtab_list">
-						<li>
+						<li class="active">
 							<a href="#" class="sc_boxtab">
-								<div class="sc_boxtab_main">스마트 패키지</div>
-								<div class="sc_boxtab_sub">편리함과 자율성, 투명성 패키지 여행 </div>
+								<div class="sc_boxtab_text_group">
+									<div class="sc_boxtab_main">스마트 패키지</div>
+									<div class="sc_boxtab_sub">편리함과 자율성, 투명성 패키지 여행 </div>
+								</div>
+								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" class="pointer">
+									<path class="cls-1" d="M0,0L6,12,13,0H0Z" />
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="sc_boxtab type2">
-								<div class="sc_boxtab_main">세미 패키지</div>
-								<div class="sc_boxtab_sub">편리함과 자율성, 투명성 패키지 여행</div>
+								<div class="sc_boxtab_text_group">
+									<div class="sc_boxtab_main">세미 패키지</div>
+									<div class="sc_boxtab_sub">편리함과 자율성, 투명성 패키지 여행</div>
+								</div>
+								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" class="pointer">
+									<path class="cls-1" d="M0,0L6,12,13,0H0Z" />
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="sc_boxtab type3">
-								<div class="sc_boxtab_main">리얼 어드밴처</div>
-								<div class="sc_boxtab_sub">편리함과 자율성, 투명성 패키지 여행 </div>
+								<div class="sc_boxtab_text_group">
+									<div class="sc_boxtab_main">리얼 어드밴처</div>
+									<div class="sc_boxtab_sub">편리함과 자율성, 투명성 패키지 여행 </div>
+								</div>
+								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" class="pointer">
+									<path class="cls-1" d="M0,0L6,12,13,0H0Z" />
+								</svg>
 							</a>
 						</li>
 					</ul>

@@ -42,3 +42,5 @@
       url('./webfont/NotoSans-Bold.woff2') format("woff2"),
       url('./webfont/NotoSans-Bold.ttf') format("truetype");
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
