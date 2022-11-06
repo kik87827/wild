@@ -39,6 +39,25 @@ function commonInit() {
 }
 
 function layoutFunc(){
+    function flowNotice(){
+		let flow_notice_slide = document.querySelectorAll(".flow_container .swiper-slide");
+		let flow_notice_obj = null;
+        console.log(flow_notice_slide);
+		if(flow_notice_slide.length>1){
+			flow_notice_obj = new Swiper(".flow_container", {
+				direction: "vertical",
+				speed : 500,
+				loop : true,
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false
+				}
+			});
+		}
+	}
+
+
+
     // mobile total
     function mbTotal(){
         var btn_htotal = document.querySelector(".btn_hdtotal"),
@@ -104,11 +123,33 @@ function layoutFunc(){
         }
     }
     mbTotal();
+    
+	flowNotice();
 }
-
 
 
 function mainVisual(){
-	
+	let main_visual_obj = null;
+	const main_visual_container = document.querySelector(".main_visual_container");
+	const mv_paging_current = document.querySelector(".mv_paging_current");
+	const mv_paging_length = document.querySelector(".mv_paging_length");
+	const main_visual_slide = main_visual_container.querySelectorAll(".swiper-slide");
+    mv_paging_length.innerHTML = main_visual_slide.length;
+	if(main_visual_slide.length>1){
+		main_visual_obj = new Swiper(".main_visual_container", {
+			speed : 1000,
+			loop : true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false
+			},
+			pagination: {
+				clickable: true,
+				el: ".mv_control_paging",
+			},
+		});
+        main_visual_obj.on("slideChange",()=>{
+            mv_paging_current.innerHTML = main_visual_obj.realIndex+1;
+        });
+	}
 }
-
