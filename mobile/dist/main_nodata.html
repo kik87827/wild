@@ -21,17 +21,328 @@
 	<div class="page_wrap">
 		<!-- header -->
 		<header class="header_wrap">
-
+			<a href="javascript:;" class="btn_hdtotal">
+				<span class="btn_hdtotal_in"></span>
+			</a>
+			<h1 class="toplogo">
+				<a href="#" class="toplogo_link"><img src="./images/common/toplogo.jpg" alt=""></a>
+			</h1>
+			<a href="javascript:;" class="btn_hdsearch"></a>
+			<!-- mobile menu -->
+			<div class="mobile_mainmenu_zone">
+				<div class="mainmenu_dim"></div>
+				<div class="mobile_mainmenu_wrap">
+					<div class="mbutil_low">
+						<!-- 로그인 전 -->
+						<ul class="mbutil_hlist">
+							<li>
+								<a href="#" class="mbutil">로그인</a>
+							</li>
+							<li>
+								<a href="#" class="mbutil">회원가입</a>
+							</li>
+						</ul>
+						<!-- // 로그인 전 -->
+						<!-- 로그인 후 -->
+						<!-- <div class="mblog_after_w">
+                <p class="mblog_after_text"><span class="mblog_sym">홍길동</span>님 환영합니다.</p>
+                </div> -->
+						<!-- // 로그인 후 -->
+					</div>
+					<div class="mbmenu_low">
+						<div class="mbmenu_inwrap">
+							<ul class="mbmenu_vlist">
+								<li><a href="#" class="mbmenu_one">남미</a></li>
+								<li><a href="#" class="mbmenu_one">중미</a></li>
+								<li><a href="#" class="mbmenu_one">아프리카</a></li>
+								<li><a href="#" class="mbmenu_one">유럽</a></li>
+								<li><a href="#" class="mbmenu_one">중동/코카서스</a></li>
+								<li><a href="#" class="mbmenu_one">특별기획</a></li>
+							</ul>
+						</div>
+					</div>
+					<a href="#" class="btn_mbmenuclose">
+						<span class="hdtext">메인메뉴 닫기</span>
+					</a>
+				</div>
+			</div>
+			<!-- // mobile menu -->
 		</header>
 		<!-- // header -->
 		<!-- middle -->
 		<section class="middle_wrap">
+			<div class="flow_notice_row">
+				<div class="flow_notice_fxwrap">
+					<div class="flow_notice_ico"></div>
+					<div class="flow_notice_get_data">
+						<div class="swiper-container flow_container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><span class="flow_text_link nodata">데이터가 없습니다.</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- visual -->
+			<div class="mv_wrap">
+				<div class="swiper-container main_visual_container">
+					<div class="swiper-wrapper">
+						<div class="swiper-nodata">
+							<p class="nodata_para">데이터가 없습니다.</p>
+						</div>
+					</div>
+				</div>
+				<div class="mv_control_paging_wrap">
+					<div class="mv_control_paging">
 
+					</div>
+				</div>
+				<div class="mv_layer">
+					<a href="#" class="mv_paging_link">
+						<span class="mv_paging_current">1</span>
+						<span class="mv_paging_part">/</span>
+						<span class="mv_paging_length"></span>
+						<span class="mv_paging_more_icon">+</span>
+					</a>
+				</div>
+			</div>
+			<!-- // visual -->
+			<script>
+				document.addEventListener("DOMContentLoaded", () => {
+					mainVisual();
+					mainContent();
+				});
+			</script>
+			<div class="mc_wrap">
+				<div class="mc_row mc_cha_link_wrap">
+					<ul class="mc_cha_link_list">
+						<li>
+							<a href="#" class="mc_cha_link">
+								<div class="mc_cha_img"></div>
+								<div class="mc_cha_text">남미</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mc_cha_link">
+								<div class="mc_cha_img type2"></div>
+								<div class="mc_cha_text">중미</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mc_cha_link">
+								<div class="mc_cha_img type3"></div>
+								<div class="mc_cha_text">아프리카</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mc_cha_link">
+								<div class="mc_cha_img type4"></div>
+								<div class="mc_cha_text">유럽</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mc_cha_link">
+								<div class="mc_cha_img type5"></div>
+								<div class="mc_cha_text">중동/코카서스</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="mc_cha_link">
+								<div class="mc_cha_img type6"></div>
+								<div class="mc_cha_text">특별기획</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="mc_row data_get_boxtab_zone bgtype2">
+					<p class="data_get_boxtab_title">지역별 실시간 출발현황</p>
+					<div class="data_get_boxtab_content">
+						<ul class="data_get_boxtab_list">
+							<li class="active"><a href="#" class="data_get_boxtab">남미</a></li>
+							<li><a href="#" class="data_get_boxtab">중미</a></li>
+						</ul>
+						<ul class="data_get_boxtab_list">
+							<li><a href="#" class="data_get_boxtab">아프리카</a></li>
+							<li><a href="#" class="data_get_boxtab">유럽</a></li>
+							<li><a href="#" class="data_get_boxtab">중동/코카서스</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="mc_row guide_banner_zone">
+					<div class="guide_banner_list">
+						<div class="guide_banner_cell">
+							<a href="#" class="guide_banner">
+								<div class="guide_main_text">설명회</div>
+								<div class="guide_sub_text">전문인솔자<br>여행 노하우</div>
+							</a>
+						</div>
+						<div class="guide_banner_cell">
+							<a href="#" class="guide_banner type2">
+								<div class="guide_main_text">1:1 맞춤여행</div>
+								<div class="guide_sub_text">당신만을<br>위한 여행</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="mc_row get_data_swiper bgtype2">
+					<p class="get_data_swiper_title">오지투어 추천여행</p>
+					<div class="sort_boxtab_fxzone">
+						<div class="sort_boxtab_fxwrap">
+							<a href="javascript:;" class="sort_boxtab active">리얼어드밴처</a>
+							<a href="javascript:;" class="sort_boxtab">세미패키지</a>
+							<a href="javascript:;" class="sort_boxtab">스마트패키지</a>
+						</div>
+					</div>
+					<div class="mc_swiper_zone">
+						<div class="swiper-container get_data_container">
+							<div class="swiper-wrapper">
+								<div class="swiper-nodata-sub">데이터가 없습니다.</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+				<div class="mc_row get_data_swiper">
+					<div class="get_data_intro_banner_row"><a href="#" class="get_data_intro_banner"><img src="./images/temp_banner_2.png" alt=""></a></div>
+					<p class="get_data_swiper_title">담당자 추천여행</p>
+					<div class="sort_boxtab_fxzone">
+						<div class="sort_boxtab_fxwrap">
+							<a href="javascript:;" class="sort_boxtab active">리얼어드밴처</a>
+							<a href="javascript:;" class="sort_boxtab">세미패키지</a>
+							<a href="javascript:;" class="sort_boxtab">스마트패키지</a>
+						</div>
+					</div>
+					<div class="mc_swiper_zone type2">
+						<div class="swiper-container gallery_one_container">
+							<div class="swiper-wrapper">
+								<div class="swiper-nodata-sub">데이터가 없습니다.</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+					<div class="get_data_intro_banner_row"><a href="#" class="get_data_intro_banner"><img src="./images/temp_banner.png" alt=""></a></div>
+				</div>
+				<div class="mc_row get_data_text bgtype3">
+					<div class="data_vbox_item">
+						<div class="data_vtitle_row">
+							<p class="data_vtitle">여행팀 후기</p>
+							<a href="#" class="btn_boxmore">더보기</a>
+						</div>
+						<div class="data_vcontent_row">
+							<div class="data_boxcard nodata">
+								<p class="nodata_para">데이터가 없습니다.</p>
+							</div>
+						</div>
+					</div>
+					<div class="data_vbox_item">
+						<div class="data_vtitle_row">
+							<p class="data_vtitle">인솔자 후기</p>
+							<a href="#" class="btn_boxmore">더보기</a>
+						</div>
+						<div class="data_vcontent_row">
+							<div class="data_boxcard nodata">
+								<p class="nodata_para">데이터가 없습니다.</p>
+							</div>
+						</div>
+					</div>
+					<div class="data_vbox_item">
+						<div class="data_vtitle_row">
+							<p class="data_vtitle">이달의 인솔자</p>
+						</div>
+						<div class="data_vcontent_row">
+							<div class="data_boxcard nodata">
+								<p class="nodata_para">데이터가 없습니다.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mc_row get_data_else">
+					<!--  -->
+					<div class="mc_data_skin_item">
+						<div class="mc_skin_title_row">
+							<p class="mc_skin_title">여행갤러리</p>
+						</div>
+						<div class="mc_skin_content_row">
+							<div class="swiper-container gallery_two_container">
+								<div class="swiper-wrapper">
+									<div class="swiper-nodata-sub">데이터가 없습니다.</div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+					</div>
+					<div class="mc_data_skin_item">
+						<div class="mc_skin_title_row type2">
+							<p class="mc_skin_title">질문과 답변</p>
+							<a href="#" class="btn_boxmore">더보기</a>
+						</div>
+						<div class="mc_skin_content_row type2">
+							<ul class="mc_qa_get_list">
+								<li class="nodata_li">
+									<p class="nodata_para">데이터가 없습니다.</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="mc_data_skin_item type2">
+						<div class="mc_color_empbox">
+							<div class="mc_color_empbox_ico"></div>
+							<div class="mc_color_empbox_cont">
+								<p class="mc_emp_guide_label">오지투어 고객센터</p>
+								<p class="mc_emp_guide_main">02.737.9808</p>
+								<p class="mc_emp_guide_sub">평일 09:30 ~ 18:30</p>
+								<ul class="mc_emp_guide_tail_list">
+									<li>점심시간 13:00 ~ 14:00</li>
+									<li>토요일/일요일/공휴일은 휴무</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- // -->
+				</div>
+			</div>
 		</section>
 		<!-- // middle -->
 		<!-- footer -->
 		<footer class="footer_wrap">
-
+			<div class="footer_else_group">
+				<div class="footer_else_row">
+					<p class="footer_else_title">오지투어 sns 공식채널</p>
+					<ul class="footer_sns_list">
+						<li><a href="#" class="sns_item sns_kakao" target="_blank"><span class="hdtext">kakao</span></a></li>
+						<li><a href="#" class="sns_item sns_blog" target="_blank"><span class="hdtext">blog</span></a></li>
+						<li><a href="#" class="sns_item sns_cafe" target="_blank"><span class="hdtext">cafe</span></a></li>
+						<li><a href="#" class="sns_item sns_insta" target="_blank"><span class="hdtext">insta</span></a></li>
+						<li><a href="#" class="sns_item sns_face" target="_blank"><span class="hdtext">facebook</span></a></li>
+					</ul>
+				</div>
+				<div class="footer_else_row type2">
+					<ul class="bottom_menu_list">
+						<li><a href="#" class="bottom_menu">로그인</a></li>
+						<li><a href="#" class="bottom_menu">예약확인</a></li>
+						<li><a href="#" class="bottom_menu">질문과 답변</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer_main_group">
+				<div class="footer_copyitem_list_wrap">
+					<p class="footer_copymain">(주)오지투어</p>
+					<ul class="footer_copyitem_list">
+						<li class="full"><span class="footer_copyitem">대표 : 오상훈</span></li>
+						<li class="full"><span class="footer_copyitem">주소 : 서울특별시 강서구 양천로 583, A동 1504호(염창동, 우림블루나인)</span></li>
+						<li><span class="footer_copyitem">전화 : 02)737-9808</span></li>
+						<li><span class="footer_copyitem">팩스 : 02)6013-9808</span></li>
+						<li><span class="footer_copyitem">이메일 : ojitravel@gmail.com</span></li>
+						<li><span class="footer_copyitem">이메일주소 무단수집 거부</span></li>
+						<li class="full"><span class="footer_copyitem">사업자등록번호 : 580-88-01143</span></li>
+						<li class="full"><span class="footer_copyitem">관광사업자등록증 : 제2020-000031호</span></li>
+						<li class="full"><span class="footer_copyitem">통신판매업신고번호 : 제2020-서울강서-3592호</span></li>
+						<li class="full"><span class="footer_copyitem">당사는 국외여행 영업보증보험 3천만원, 국외 기획여행 보증보험 2억원, 여행자보험 2억원에 가입되어 있습니다.</span></li>
+						<li class="full"><span class="footer_copyitem">개인정보관리책임자 : 이선미</span></li>
+					</ul>
+				</div>
+				<p class="footer_copyright">Copyright ⓒojitour 2011. All rights reserved.</p>
+			</div>
 		</footer>
 		<!-- // footer -->
 	</div>

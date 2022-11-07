@@ -1,41 +1,242 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-    <head>
-        <meta charset="utf-8">
-        <meta name="format-detection" content="telephone=no"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href="./css/common_re.css" rel="stylesheet"><!-- 템플릿 사이트 common -->
-        <link href="./css/layout.css" rel="stylesheet">
-        <link href="./css/swiper.min.css" rel="stylesheet">
-        <link href="./css/style.css" rel="stylesheet">
-        <script src="./js/jquery-3.4.1.min.js"></script>
-        <script src="./js/dynamicListener.min.js"></script>
-        <script src="./js/swiper.min.js"></script>
-        <script src="./js/front.js"></script>
-        <title></title>
-    </head>
-
+    @@include('./include/head.html')
     <body class="front_body">
-        <div
-            class="page_wrap">
-            <!-- header -->
-            <header class="header_wrap">
-                
-            </header>
-            <!-- // header -->
+        <div class="page_wrap">
+            @@include('./include/header.html')
             <!-- middle -->
             <section class="middle_wrap">
-               
+               <div class="flow_notice_row">
+                    <div class="flow_notice_fxwrap">
+                        <div class="flow_notice_ico"></div>
+                        <div class="flow_notice_get_data">
+                            <div class="swiper-container flow_container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><span class="flow_text_link nodata">데이터가 없습니다.</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+               <!-- visual -->
+               <div class="mv_wrap">
+                    <div class="swiper-container main_visual_container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-nodata">
+                                <p class="nodata_para">데이터가 없습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mv_control_paging_wrap">
+                        <div class="mv_control_paging">
+
+                        </div>
+                    </div>
+                    <div class="mv_layer">
+                        <a href="#" class="mv_paging_link">
+                            <span class="mv_paging_current">1</span>
+                            <span class="mv_paging_part">/</span>
+                            <span class="mv_paging_length"></span>
+                            <span class="mv_paging_more_icon">+</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- // visual -->
+                <script>
+                    document.addEventListener("DOMContentLoaded",() => {
+                        mainVisual();
+                        mainContent();
+                    });
+                </script>
+                <div class="mc_wrap">
+                    <div class="mc_row mc_cha_link_wrap">
+                        <ul class="mc_cha_link_list">
+                            <li>
+                                <a href="#" class="mc_cha_link">
+                                    <div class="mc_cha_img"></div>
+                                    <div class="mc_cha_text">남미</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mc_cha_link">
+                                    <div class="mc_cha_img type2"></div>
+                                    <div class="mc_cha_text">중미</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mc_cha_link">
+                                    <div class="mc_cha_img type3"></div>
+                                    <div class="mc_cha_text">아프리카</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mc_cha_link">
+                                    <div class="mc_cha_img type4"></div>
+                                    <div class="mc_cha_text">유럽</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mc_cha_link">
+                                    <div class="mc_cha_img type5"></div>
+                                    <div class="mc_cha_text">중동/코카서스</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="mc_cha_link">
+                                    <div class="mc_cha_img type6"></div>
+                                    <div class="mc_cha_text">특별기획</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mc_row data_get_boxtab_zone bgtype2">
+                        <p class="data_get_boxtab_title">지역별 실시간 출발현황</p>
+                        <div class="data_get_boxtab_content">
+                            <ul class="data_get_boxtab_list">
+                                <li class="active"><a href="#" class="data_get_boxtab">남미</a></li>
+                                <li><a href="#" class="data_get_boxtab">중미</a></li>
+                            </ul>
+                            <ul class="data_get_boxtab_list">
+                                <li><a href="#" class="data_get_boxtab">아프리카</a></li>
+                                <li><a href="#" class="data_get_boxtab">유럽</a></li>
+                                <li><a href="#" class="data_get_boxtab">중동/코카서스</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mc_row guide_banner_zone">
+                        <div class="guide_banner_list">
+                            <div class="guide_banner_cell">
+                                <a href="#" class="guide_banner">
+                                    <div class="guide_main_text">설명회</div>
+                                    <div class="guide_sub_text">전문인솔자<br>여행 노하우</div>
+                                </a>
+                            </div>
+                            <div class="guide_banner_cell">
+                                <a href="#" class="guide_banner type2">
+                                    <div class="guide_main_text">1:1 맞춤여행</div>
+                                    <div class="guide_sub_text">당신만을<br>위한 여행</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mc_row get_data_swiper bgtype2">
+                        <p class="get_data_swiper_title">오지투어 추천여행</p>
+                        <div class="sort_boxtab_fxzone">
+                            <div class="sort_boxtab_fxwrap">
+                                <a href="javascript:;" class="sort_boxtab active">리얼어드밴처</a>
+                                <a href="javascript:;" class="sort_boxtab">세미패키지</a>
+                                <a href="javascript:;" class="sort_boxtab">스마트패키지</a>
+                            </div>
+                        </div>
+                        <div class="mc_swiper_zone">
+                            <div class="swiper-container get_data_container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-nodata-sub">데이터가 없습니다.</div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mc_row get_data_swiper">
+                        <div class="get_data_intro_banner_row"><a href="#" class="get_data_intro_banner"><img src="./images/temp_banner_2.png" alt=""></a></div>
+                        <p class="get_data_swiper_title">담당자 추천여행</p>
+                        <div class="sort_boxtab_fxzone">
+                            <div class="sort_boxtab_fxwrap">
+                                <a href="javascript:;" class="sort_boxtab active">리얼어드밴처</a>
+                                <a href="javascript:;" class="sort_boxtab">세미패키지</a>
+                                <a href="javascript:;" class="sort_boxtab">스마트패키지</a>
+                            </div>
+                        </div>
+                        <div class="mc_swiper_zone type2">
+                            <div class="swiper-container gallery_one_container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-nodata-sub">데이터가 없습니다.</div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="get_data_intro_banner_row"><a href="#" class="get_data_intro_banner"><img src="./images/temp_banner.png" alt=""></a></div>
+                    </div>
+                    <div class="mc_row get_data_text bgtype3">
+                        <div class="data_vbox_item">
+                            <div class="data_vtitle_row">
+                                <p class="data_vtitle">여행팀 후기</p>
+                                <a href="#" class="btn_boxmore">더보기</a>
+                            </div>
+                            <div class="data_vcontent_row">
+                                <div class="data_boxcard nodata">
+                                   <p class="nodata_para">데이터가 없습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data_vbox_item">
+                            <div class="data_vtitle_row">
+                                <p class="data_vtitle">인솔자 후기</p>
+                                <a href="#" class="btn_boxmore">더보기</a>
+                            </div>
+                            <div class="data_vcontent_row">
+                                 <div class="data_boxcard nodata">
+                                   <p class="nodata_para">데이터가 없습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data_vbox_item">
+                            <div class="data_vtitle_row">
+                                <p class="data_vtitle">이달의 인솔자</p>
+                            </div>
+                            <div class="data_vcontent_row">
+                                <div class="data_boxcard nodata">
+                                   <p class="nodata_para">데이터가 없습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mc_row get_data_else">
+                        <!--  -->
+                        <div class="mc_data_skin_item">
+                            <div class="mc_skin_title_row"><p class="mc_skin_title">여행갤러리</p></div>
+                            <div class="mc_skin_content_row">
+                                <div class="swiper-container gallery_two_container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-nodata-sub">데이터가 없습니다.</div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mc_data_skin_item">
+                            <div class="mc_skin_title_row type2">
+                                <p class="mc_skin_title">질문과 답변</p>
+                                <a href="#" class="btn_boxmore">더보기</a>
+                            </div>
+                            <div class="mc_skin_content_row type2">
+                                <ul class="mc_qa_get_list">
+                                    <li class="nodata_li">
+                                        <p class="nodata_para">데이터가 없습니다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mc_data_skin_item type2">
+                            <div class="mc_color_empbox">
+                                <div class="mc_color_empbox_ico"></div>
+                                <div class="mc_color_empbox_cont">
+                                    <p class="mc_emp_guide_label">오지투어 고객센터</p>
+                                    <p class="mc_emp_guide_main">02.737.9808</p>
+                                    <p class="mc_emp_guide_sub">평일 09:30 ~ 18:30</p>
+                                    <ul class="mc_emp_guide_tail_list">
+                                        <li>점심시간 13:00 ~ 14:00</li>
+                                        <li>토요일/일요일/공휴일은 휴무</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // -->
+                    </div>
+                </div>
             </section>
             <!-- // middle -->
-            <!-- footer -->
-            <footer class="footer_wrap">
-               
-            </footer>
-            <!-- // footer -->
+            @@include('./include/footer.html')
         </div>
     </body>
-
 </html>

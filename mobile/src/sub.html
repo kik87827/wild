@@ -6,16 +6,16 @@
             @@include('./include/header.html')
             <!-- middle -->
             <section class="middle_wrap">
-               <div class="flow_notice_row">
+                <div class="flow_notice_row">
                     <div class="flow_notice_fxwrap">
                         <div class="flow_notice_ico"></div>
                         <div class="flow_notice_get_data">
                             <div class="swiper-container flow_container">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><a href="#" class="flow_text_link">11월 남미/아프리카 여행 설명회 안내11월 남미/아프리카 여행 설명회 안내</a></div>
-                                    <div class="swiper-slide"><a href="#" class="flow_text_link">11월 남미/아프리카 여행 설명회 안내11월 남미/아프리카 여행 설명회 안내</a></div>
-                                    <div class="swiper-slide"><a href="#" class="flow_text_link">11월 남미/아프리카 여행 설명회 안내11월 남미/아프리카 여행 설명회 안내</a></div>
-                                    <div class="swiper-slide"><a href="#" class="flow_text_link">11월 남미/아프리카 여행 설명회 안내11월 남미/아프리카 여행 설명회 안내</a></div>
+                                    <div class="swiper-slide"><a href="#" class="flow_text_link"><span class="flow_text_link_text">11월 남미/아프리카 여행 설명회 안내11월 남미/아프리카 여행 설명회 안내</span></a></div>
+                                    <div class="swiper-slide"><a href="#" class="flow_text_link"><span class="flow_text_link_text">11월 남미/아프리카 여행 설명회 안내11월 남미/아프리카 여행 설명회 안내</span></a></div>
+                                    <div class="swiper-slide"><a href="#" class="flow_text_link"><span class="flow_text_link_text">11월 남미/아프리카 여행 설명회 안내11월 남미/아프리카 여행 설명회 안내</span></a></div>
+                                    <div class="swiper-slide"><a href="#" class="flow_text_link"><span class="flow_text_link_text">11월 남미/아프리카 여행 설명회 안내11월 남미/아프리카 여행 설명회 안내</span></a></div>
                                 </div>
                             </div>
                         </div>
@@ -26,13 +26,13 @@
                     <div class="swiper-container main_visual_container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="#" class="main_visual_banner"><img src="./images/main_visual_01.jpg" alt=""></a>
+                                <a href="#" class="main_visual_banner"><img src="./images/temp_main.png" alt=""></a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="main_visual_banner"><img src="./images/main_visual_02.jpg" alt=""></a>
+                                <a href="#" class="main_visual_banner"><img src="./images/temp_main_02.png" alt=""></a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="main_visual_banner"><img src="./images/main_visual_03.jpg" alt=""></a>
+                                <a href="#" class="main_visual_banner"><img src="./images/temp_main_03.png" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,10 @@
                 </div>
                 <!-- // visual -->
                 <script>
-                    mainVisual();
+                    document.addEventListener("DOMContentLoaded",() => {
+                        mainVisual();
+                        mainContent();
+                    });
                 </script>
                 <div class="sub_content_wrap">
                     <div class="sub_cont_btns">
@@ -81,7 +84,7 @@
                         </div>
                     </div>
                     <div class="sub_cont_listzone">
-                        <div class="sort_boxtab_fxzone">
+                        <div class="sort_boxtab_fxzone type2">
                             <div class="sort_boxtab_fxwrap">
                                 <a href="javascript:;" class="sort_boxtab active">리얼어드밴처</a>
                                 <a href="javascript:;" class="sort_boxtab">세미패키지</a>
@@ -179,6 +182,9 @@
                                             <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
                                         </div>
                                     </div>
+                                </li>
+                                <li class="nodata_li">
+                                    <p class="nodata_para">데이터가 없습니다.</p>
                                 </li>
                             </ul>
                         </div>
