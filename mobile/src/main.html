@@ -52,7 +52,10 @@
                 </div>
                 <!-- // visual -->
                 <script>
-                    mainVisual();
+                    document.addEventListener("DOMContentLoaded",() => {
+                        mainVisual();
+                        mainContent();
+                    });
                 </script>
                 <div class="mc_wrap">
                     <div class="mc_row mc_cha_link_wrap">
@@ -95,12 +98,14 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="mc_row data_get_boxtab_zone">
+                    <div class="mc_row data_get_boxtab_zone bgtype2">
                         <p class="data_get_boxtab_title">지역별 실시간 출발현황</p>
                         <div class="data_get_boxtab_content">
                             <ul class="data_get_boxtab_list">
                                 <li class="active"><a href="#" class="data_get_boxtab">남미</a></li>
                                 <li><a href="#" class="data_get_boxtab">중미</a></li>
+                            </ul>
+                            <ul class="data_get_boxtab_list">
                                 <li><a href="#" class="data_get_boxtab">아프리카</a></li>
                                 <li><a href="#" class="data_get_boxtab">유럽</a></li>
                                 <li><a href="#" class="data_get_boxtab">중동/코카서스</a></li>
@@ -123,7 +128,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mc_row get_data_swiper">
+                    <div class="mc_row get_data_swiper bgtype2">
                         <p class="get_data_swiper_title">오지투어 추천여행</p>
                         <div class="sort_boxtab_fxzone">
                             <div class="sort_boxtab_fxwrap">
@@ -132,151 +137,153 @@
                                 <a href="javascript:;" class="sort_boxtab">스마트패키지</a>
                             </div>
                         </div>
-                        <div class="swiper-container get_data_container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <!--  -->
-                                    <div class="list_thum_obj">
-                                        <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252_2.jpg" alt=""></a>
-                                        <div class="list_thum_spec_row">
-                                            <a href="#" class="list_thum_spec_group">
-                                                <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
-                                                <div class="list_thum_spec_dl">
-                                                    <span class="list_thum_spec_dt">최저가격</span>
-                                                    <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                </div>
-                                            </a>
-                                            <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+                        <div class="mc_swiper_zone">
+                            <div class="swiper-container get_data_container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <!--  -->
+                                        <div class="list_thum_obj">
+                                            <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252_2.jpg" alt=""></a>
+                                            <div class="list_thum_spec_row">
+                                                <a href="#" class="list_thum_spec_group">
+                                                    <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+                                                    <div class="list_thum_spec_dl">
+                                                        <span class="list_thum_spec_dt">최저가격</span>
+                                                        <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                    </div>
+                                                </a>
+                                                <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <!-- // -->
-                                    <!--  -->
-                                    <div class="list_thum_obj">
-                                        <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
-                                        <div class="list_thum_spec_row">
-                                            <a href="#" class="list_thum_spec_group">
-                                                <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
-                                                <div class="list_thum_spec_dl">
-                                                    <span class="list_thum_spec_dt">최저가격</span>
-                                                    <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                </div>
-                                            </a>
-                                            <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+                                        <!-- // -->
+                                        <!--  -->
+                                        <div class="list_thum_obj">
+                                            <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
+                                            <div class="list_thum_spec_row">
+                                                <a href="#" class="list_thum_spec_group">
+                                                    <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+                                                    <div class="list_thum_spec_dl">
+                                                        <span class="list_thum_spec_dt">최저가격</span>
+                                                        <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                    </div>
+                                                </a>
+                                                <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <!-- // -->
-                                    <!--  -->
-                                    <div class="list_thum_obj">
-                                        <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
-                                        <div class="list_thum_spec_row">
-                                            <a href="#" class="list_thum_spec_group">
-                                                <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
-                                                <div class="list_thum_spec_dl">
-                                                    <span class="list_thum_spec_dt">최저가격</span>
-                                                    <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                </div>
-                                            </a>
-                                            <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+                                        <!-- // -->
+                                        <!--  -->
+                                        <div class="list_thum_obj">
+                                            <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
+                                            <div class="list_thum_spec_row">
+                                                <a href="#" class="list_thum_spec_group">
+                                                    <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+                                                    <div class="list_thum_spec_dl">
+                                                        <span class="list_thum_spec_dt">최저가격</span>
+                                                        <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                    </div>
+                                                </a>
+                                                <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+                                            </div>
                                         </div>
+                                        <!-- // -->
                                     </div>
-                                    <!-- // -->
+                                    <div class="swiper-slide">
+                                        <!--  -->
+                                        <div class="list_thum_obj">
+                                            <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252_2.jpg" alt=""></a>
+                                            <div class="list_thum_spec_row">
+                                                <a href="#" class="list_thum_spec_group">
+                                                    <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+                                                    <div class="list_thum_spec_dl">
+                                                        <span class="list_thum_spec_dt">최저가격</span>
+                                                        <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                    </div>
+                                                </a>
+                                                <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+                                            </div>
+                                        </div>
+                                        <!-- // -->
+                                        <!--  -->
+                                        <div class="list_thum_obj">
+                                            <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
+                                            <div class="list_thum_spec_row">
+                                                <a href="#" class="list_thum_spec_group">
+                                                    <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+                                                    <div class="list_thum_spec_dl">
+                                                        <span class="list_thum_spec_dt">최저가격</span>
+                                                        <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                    </div>
+                                                </a>
+                                                <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+                                            </div>
+                                        </div>
+                                        <!-- // -->
+                                        <!--  -->
+                                        <div class="list_thum_obj">
+                                            <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
+                                            <div class="list_thum_spec_row">
+                                                <a href="#" class="list_thum_spec_group">
+                                                    <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+                                                    <div class="list_thum_spec_dl">
+                                                        <span class="list_thum_spec_dt">최저가격</span>
+                                                        <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                    </div>
+                                                </a>
+                                                <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+                                            </div>
+                                        </div>
+                                        <!-- // -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!--  -->
+                                        <div class="list_thum_obj">
+                                            <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252_2.jpg" alt=""></a>
+                                            <div class="list_thum_spec_row">
+                                                <a href="#" class="list_thum_spec_group">
+                                                    <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+                                                    <div class="list_thum_spec_dl">
+                                                        <span class="list_thum_spec_dt">최저가격</span>
+                                                        <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                    </div>
+                                                </a>
+                                                <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+                                            </div>
+                                        </div>
+                                        <!-- // -->
+                                        <!--  -->
+                                        <div class="list_thum_obj">
+                                            <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
+                                            <div class="list_thum_spec_row">
+                                                <a href="#" class="list_thum_spec_group">
+                                                    <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+                                                    <div class="list_thum_spec_dl">
+                                                        <span class="list_thum_spec_dt">최저가격</span>
+                                                        <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                    </div>
+                                                </a>
+                                                <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+                                            </div>
+                                        </div>
+                                        <!-- // -->
+                                        <!--  -->
+                                        <div class="list_thum_obj">
+                                            <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
+                                            <div class="list_thum_spec_row">
+                                                <a href="#" class="list_thum_spec_group">
+                                                    <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
+                                                    <div class="list_thum_spec_dl">
+                                                        <span class="list_thum_spec_dt">최저가격</span>
+                                                        <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                    </div>
+                                                </a>
+                                                <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
+                                            </div>
+                                        </div>
+                                        <!-- // -->
+                                    </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <!--  -->
-                                    <div class="list_thum_obj">
-                                        <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252_2.jpg" alt=""></a>
-                                        <div class="list_thum_spec_row">
-                                            <a href="#" class="list_thum_spec_group">
-                                                <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
-                                                <div class="list_thum_spec_dl">
-                                                    <span class="list_thum_spec_dt">최저가격</span>
-                                                    <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                </div>
-                                            </a>
-                                            <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-                                    <!--  -->
-                                    <div class="list_thum_obj">
-                                        <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
-                                        <div class="list_thum_spec_row">
-                                            <a href="#" class="list_thum_spec_group">
-                                                <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
-                                                <div class="list_thum_spec_dl">
-                                                    <span class="list_thum_spec_dt">최저가격</span>
-                                                    <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                </div>
-                                            </a>
-                                            <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-                                    <!--  -->
-                                    <div class="list_thum_obj">
-                                        <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
-                                        <div class="list_thum_spec_row">
-                                            <a href="#" class="list_thum_spec_group">
-                                                <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
-                                                <div class="list_thum_spec_dl">
-                                                    <span class="list_thum_spec_dt">최저가격</span>
-                                                    <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                </div>
-                                            </a>
-                                            <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!--  -->
-                                    <div class="list_thum_obj">
-                                        <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252_2.jpg" alt=""></a>
-                                        <div class="list_thum_spec_row">
-                                            <a href="#" class="list_thum_spec_group">
-                                                <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
-                                                <div class="list_thum_spec_dl">
-                                                    <span class="list_thum_spec_dt">최저가격</span>
-                                                    <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                </div>
-                                            </a>
-                                            <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-                                    <!--  -->
-                                    <div class="list_thum_obj">
-                                        <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
-                                        <div class="list_thum_spec_row">
-                                            <a href="#" class="list_thum_spec_group">
-                                                <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
-                                                <div class="list_thum_spec_dl">
-                                                    <span class="list_thum_spec_dt">최저가격</span>
-                                                    <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                </div>
-                                            </a>
-                                            <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-                                    <!--  -->
-                                    <div class="list_thum_obj">
-                                        <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
-                                        <div class="list_thum_spec_row">
-                                            <a href="#" class="list_thum_spec_group">
-                                                <div class="list_thum_spec_main">REAtL 스페인, 포르투갈, 모로코 31일</div>
-                                                <div class="list_thum_spec_dl">
-                                                    <span class="list_thum_spec_dt">최저가격</span>
-                                                    <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                </div>
-                                            </a>
-                                            <div class="list_thum_spec_btns"><a href="#" class="btn_list_thum_box">예약하기</a></div>
-                                        </div>
-                                    </div>
-                                    <!-- // -->
-                                </div>
+                                <div class="swiper-pagination"></div>
                             </div>
-                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                     <div class="mc_row get_data_swiper">
@@ -289,190 +296,192 @@
                                 <a href="javascript:;" class="sort_boxtab">스마트패키지</a>
                             </div>
                         </div>
-                        <div class="swiper-container gallery_one_container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <ul class="flex_thum_list">
-                                        <li>
-                                            <div class="list_thum_obj">
-                                                <a href="#" class="list_thum_img_row"><img src="./images/temp_640x400.png" alt=""></a>
-                                                <div class="list_thum_spec_row">
-                                                    <a href="#" class="list_thum_spec_group">
-                                                        <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
-                                                        <div class="list_thum_spec_dl">
-                                                            <span class="list_thum_spec_dt">최저가격</span>
-                                                            <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                        </div>
-                                                    </a>
+                        <div class="mc_swiper_zone type2">
+                            <div class="swiper-container gallery_one_container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <ul class="flex_thum_list">
+                                            <li>
+                                                <div class="list_thum_obj">
+                                                    <a href="#" class="list_thum_img_row"><img src="./images/temp_640x400.png" alt=""></a>
+                                                    <div class="list_thum_spec_row">
+                                                        <a href="#" class="list_thum_spec_group">
+                                                            <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
+                                                            <div class="list_thum_spec_dl">
+                                                                <span class="list_thum_spec_dt">최저가격</span>
+                                                                <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="list_thum_obj">
-                                                <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
-                                                <div class="list_thum_spec_row">
-                                                    <a href="#" class="list_thum_spec_group">
-                                                        <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
-                                                        <div class="list_thum_spec_dl">
-                                                            <span class="list_thum_spec_dt">최저가격</span>
-                                                            <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                        </div>
-                                                    </a>
+                                            </li>
+                                            <li>
+                                                <div class="list_thum_obj">
+                                                    <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
+                                                    <div class="list_thum_spec_row">
+                                                        <a href="#" class="list_thum_spec_group">
+                                                            <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
+                                                            <div class="list_thum_spec_dl">
+                                                                <span class="list_thum_spec_dt">최저가격</span>
+                                                                <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="list_thum_obj">
-                                                <a href="#" class="list_thum_img_row"><img src="./images/temp_640x400.png" alt=""></a>
-                                                <div class="list_thum_spec_row">
-                                                    <a href="#" class="list_thum_spec_group">
-                                                        <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
-                                                        <div class="list_thum_spec_dl">
-                                                            <span class="list_thum_spec_dt">최저가격</span>
-                                                            <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                        </div>
-                                                    </a>
+                                            </li>
+                                            <li>
+                                                <div class="list_thum_obj">
+                                                    <a href="#" class="list_thum_img_row"><img src="./images/temp_640x400.png" alt=""></a>
+                                                    <div class="list_thum_spec_row">
+                                                        <a href="#" class="list_thum_spec_group">
+                                                            <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
+                                                            <div class="list_thum_spec_dl">
+                                                                <span class="list_thum_spec_dt">최저가격</span>
+                                                                <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="list_thum_obj">
-                                                <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
-                                                <div class="list_thum_spec_row">
-                                                    <a href="#" class="list_thum_spec_group">
-                                                        <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
-                                                        <div class="list_thum_spec_dl">
-                                                            <span class="list_thum_spec_dt">최저가격</span>
-                                                            <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                        </div>
-                                                    </a>
+                                            </li>
+                                            <li>
+                                                <div class="list_thum_obj">
+                                                    <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
+                                                    <div class="list_thum_spec_row">
+                                                        <a href="#" class="list_thum_spec_group">
+                                                            <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
+                                                            <div class="list_thum_spec_dl">
+                                                                <span class="list_thum_spec_dt">최저가격</span>
+                                                                <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="list_thum_obj">
-                                                <a href="#" class="list_thum_img_row"><img src="./images/temp_640x400.png" alt=""></a>
-                                                <div class="list_thum_spec_row">
-                                                    <a href="#" class="list_thum_spec_group">
-                                                        <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
-                                                        <div class="list_thum_spec_dl">
-                                                            <span class="list_thum_spec_dt">최저가격</span>
-                                                            <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                        </div>
-                                                    </a>
+                                            </li>
+                                            <li>
+                                                <div class="list_thum_obj">
+                                                    <a href="#" class="list_thum_img_row"><img src="./images/temp_640x400.png" alt=""></a>
+                                                    <div class="list_thum_spec_row">
+                                                        <a href="#" class="list_thum_spec_group">
+                                                            <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
+                                                            <div class="list_thum_spec_dl">
+                                                                <span class="list_thum_spec_dt">최저가격</span>
+                                                                <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="list_thum_obj">
-                                                <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
-                                                <div class="list_thum_spec_row">
-                                                    <a href="#" class="list_thum_spec_group">
-                                                        <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
-                                                        <div class="list_thum_spec_dl">
-                                                            <span class="list_thum_spec_dt">최저가격</span>
-                                                            <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                        </div>
-                                                    </a>
+                                            </li>
+                                            <li>
+                                                <div class="list_thum_obj">
+                                                    <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
+                                                    <div class="list_thum_spec_row">
+                                                        <a href="#" class="list_thum_spec_group">
+                                                            <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
+                                                            <div class="list_thum_spec_dl">
+                                                                <span class="list_thum_spec_dt">최저가격</span>
+                                                                <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <ul class="flex_thum_list">
+                                            <li>
+                                                <div class="list_thum_obj">
+                                                    <a href="#" class="list_thum_img_row"><img src="./images/temp_640x400.png" alt=""></a>
+                                                    <div class="list_thum_spec_row">
+                                                        <a href="#" class="list_thum_spec_group">
+                                                            <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
+                                                            <div class="list_thum_spec_dl">
+                                                                <span class="list_thum_spec_dt">최저가격</span>
+                                                                <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list_thum_obj">
+                                                    <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
+                                                    <div class="list_thum_spec_row">
+                                                        <a href="#" class="list_thum_spec_group">
+                                                            <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
+                                                            <div class="list_thum_spec_dl">
+                                                                <span class="list_thum_spec_dt">최저가격</span>
+                                                                <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list_thum_obj">
+                                                    <a href="#" class="list_thum_img_row"><img src="./images/temp_640x400.png" alt=""></a>
+                                                    <div class="list_thum_spec_row">
+                                                        <a href="#" class="list_thum_spec_group">
+                                                            <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
+                                                            <div class="list_thum_spec_dl">
+                                                                <span class="list_thum_spec_dt">최저가격</span>
+                                                                <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list_thum_obj">
+                                                    <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
+                                                    <div class="list_thum_spec_row">
+                                                        <a href="#" class="list_thum_spec_group">
+                                                            <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
+                                                            <div class="list_thum_spec_dl">
+                                                                <span class="list_thum_spec_dt">최저가격</span>
+                                                                <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list_thum_obj">
+                                                    <a href="#" class="list_thum_img_row"><img src="./images/temp_640x400.png" alt=""></a>
+                                                    <div class="list_thum_spec_row">
+                                                        <a href="#" class="list_thum_spec_group">
+                                                            <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
+                                                            <div class="list_thum_spec_dl">
+                                                                <span class="list_thum_spec_dt">최저가격</span>
+                                                                <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list_thum_obj">
+                                                    <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
+                                                    <div class="list_thum_spec_row">
+                                                        <a href="#" class="list_thum_spec_group">
+                                                            <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
+                                                            <div class="list_thum_spec_dl">
+                                                                <span class="list_thum_spec_dt">최저가격</span>
+                                                                <span class="list_thum_spec_dd">3,490,000원~</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <ul class="flex_thum_list">
-                                        <li>
-                                            <div class="list_thum_obj">
-                                                <a href="#" class="list_thum_img_row"><img src="./images/temp_640x400.png" alt=""></a>
-                                                <div class="list_thum_spec_row">
-                                                    <a href="#" class="list_thum_spec_group">
-                                                        <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
-                                                        <div class="list_thum_spec_dl">
-                                                            <span class="list_thum_spec_dt">최저가격</span>
-                                                            <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="list_thum_obj">
-                                                <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
-                                                <div class="list_thum_spec_row">
-                                                    <a href="#" class="list_thum_spec_group">
-                                                        <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
-                                                        <div class="list_thum_spec_dl">
-                                                            <span class="list_thum_spec_dt">최저가격</span>
-                                                            <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="list_thum_obj">
-                                                <a href="#" class="list_thum_img_row"><img src="./images/temp_640x400.png" alt=""></a>
-                                                <div class="list_thum_spec_row">
-                                                    <a href="#" class="list_thum_spec_group">
-                                                        <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
-                                                        <div class="list_thum_spec_dl">
-                                                            <span class="list_thum_spec_dt">최저가격</span>
-                                                            <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="list_thum_obj">
-                                                <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
-                                                <div class="list_thum_spec_row">
-                                                    <a href="#" class="list_thum_spec_group">
-                                                        <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
-                                                        <div class="list_thum_spec_dl">
-                                                            <span class="list_thum_spec_dt">최저가격</span>
-                                                            <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="list_thum_obj">
-                                                <a href="#" class="list_thum_img_row"><img src="./images/temp_640x400.png" alt=""></a>
-                                                <div class="list_thum_spec_row">
-                                                    <a href="#" class="list_thum_spec_group">
-                                                        <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
-                                                        <div class="list_thum_spec_dl">
-                                                            <span class="list_thum_spec_dt">최저가격</span>
-                                                            <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="list_thum_obj">
-                                                <a href="#" class="list_thum_img_row"><img src="./images/temp_638x252.png" alt=""></a>
-                                                <div class="list_thum_spec_row">
-                                                    <a href="#" class="list_thum_spec_group">
-                                                        <div class="list_thum_spec_main">리얼 어드밴처 남미 31일</div>
-                                                        <div class="list_thum_spec_dl">
-                                                            <span class="list_thum_spec_dt">최저가격</span>
-                                                            <span class="list_thum_spec_dd">3,490,000원~</span>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <div class="swiper-pagination"></div>
                             </div>
-                            <div class="swiper-pagination"></div>
                         </div>
                         <div class="get_data_intro_banner_row"><a href="#" class="get_data_intro_banner"><img src="./images/temp_banner.png" alt=""></a></div>
                     </div>
-                    <div class="mc_row get_data_text">
+                    <div class="mc_row get_data_text bgtype3">
                         <div class="data_vbox_item">
                             <div class="data_vtitle_row">
                                 <p class="data_vtitle">여행팀 후기</p>

@@ -42,7 +42,6 @@ function layoutFunc(){
     function flowNotice(){
 		let flow_notice_slide = document.querySelectorAll(".flow_container .swiper-slide");
 		let flow_notice_obj = null;
-        console.log(flow_notice_slide);
 		if(flow_notice_slide.length>1){
 			flow_notice_obj = new Swiper(".flow_container", {
 				direction: "vertical",
@@ -151,5 +150,31 @@ function mainVisual(){
         main_visual_obj.on("slideChange",()=>{
             mv_paging_current.innerHTML = main_visual_obj.realIndex+1;
         });
+	}
+}
+
+
+function mainContent(){
+	let get_data_container_slide = document.querySelectorAll(".get_data_container .swiper-slide");
+	let gallery_one_container_slide = document.querySelectorAll(".gallery_one_container .swiper-slide");
+	let dataSwiperObj_01 = null;
+	let dataSwiperObj_02 = null;
+	if(get_data_container_slide.length>1){
+		dataSwiperObj_01 = new Swiper(".get_data_container", {
+			speed : 500,
+			loop : true,
+			pagination: {
+				el: '.get_data_container .swiper-pagination',
+			}
+		});
+	}
+	if(gallery_one_container_slide.length>1){
+		dataSwiperObj_02 = new Swiper(".gallery_one_container", {
+			speed : 500,
+			loop : true,
+			pagination: {
+				el: '.gallery_one_container .swiper-pagination',
+			}
+		});
 	}
 }
