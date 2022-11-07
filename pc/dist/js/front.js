@@ -168,7 +168,9 @@ function posLayerEvent(){
 		}else{
 			targetCols.find(".search_form_text_result").html(activeText);
 		}
-		console.log();
+		if(activeText.length === 0 || activeDate.length === 0){
+			targetCols.removeClass("result_mode");
+		}
 		posLayerHide(thisParent);
 	});
 
