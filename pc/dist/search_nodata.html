@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1280" />
+	<link href="./css/common_c.css" rel="stylesheet"> <!-- 템플릿 사이트 common -->
+	<link href="./css/layout.css" rel="stylesheet">
+	<link href="./css/swiper.min.css" rel="stylesheet">
+	<link href="./css/jqueryui.css" rel="stylesheet">
+	<link href="./css/style.css" rel="stylesheet">
+
+	<script src="./js/moment.min.js"></script>
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script src="./js/hoverIntent.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/daterangepicker.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+	<script src="./js/front.js"></script>
+	<title></title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap">
+		<!-- header -->
+		<header class="header_zone">
+			<div class="head_notice_row">
+				<div class="head_notice_inner">
+					<div class="head_notice_cols">
+						<a href="#" class="head_notice_banner">
+							<div class="head_notice_text_group">
+								<div class="head_notice_text_main">중남미 세미/배낭여행 팀 송출 1위</div>
+								<div class="head_notice_text_sub">2006년12월1차팀 ~ 현재 253차 팀 송출</div>
+							</div>
+						</a>
+					</div>
+					<div class="head_notice_cols">
+						<a href="#" class="head_notice_banner ico_02">
+							<div class="head_notice_text_group">
+								<div class="head_notice_text_main">설명회</div>
+								<div class="head_notice_text_sub">전문 인솔자가 알려주는 여행정보와 노하우</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="head_main_row">
+				<div class="head_main_inner">
+					<div class="head_flow_item">
+						<div class="swiper-container flow_notice_container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#" class="flow_notice">11월 남미/아프리카 여행 설명회 안내</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="flow_notice">12월 남미/아프리카 여행 설명회 안내</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="flow_notice">1월 남미/아프리카 여행 설명회 안내11월 남미/아프리카 여행 설명회 안내</a>
+								</div>
+							</div>
+						</div>
+						<a href="#" class="btn_flow_more"><span class="hdtext">더보기</span></a>
+					</div>
+					<div class="head_logo_item">
+						<h1 class="head_logo"><a href="#" class="head_top_logo"><img src="./images/common/toplogo.png" alt="OJI TOUR"></a></h1>
+					</div>
+					<div class="head_util_item">
+						<ul class="head_util_list">
+							<li><a href="#" class="util_box">로그인</a></li>
+							<li><a href="#" class="util_text_item ico_men">회원</a></li>
+							<li><a href="#" class="util_text_item">예약확인/맞춤문의</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="head_gnb_row">
+				<div class="head_gnb_fxwrap">
+					<a href="#" class="btn_global_total"><span class="global_total_ico_wrap"><span class="global_total_ico"></span></span><span class="global_total_text">전체메뉴</span></a>
+					<div class="gnb_list_wrap">
+						<ul class="gnb_list">
+							<li><a href="#" class="gnb_one">남미</a></li>
+							<li><a href="#" class="gnb_one">중미</a></li>
+							<li><a href="#" class="gnb_one">아프리카</a></li>
+							<li><a href="#" class="gnb_one">유럽</a></li>
+							<li><a href="#" class="gnb_one">중동/코카서스</a></li>
+							<li><a href="#" class="gnb_one">특별기획</a></li>
+						</ul>
+					</div>
+					<a href="#" class="btn_gnb_utilbox"><span class="btn_gnb_utilbox_intext">출발현황</span></a>
+				</div>
+			</div>
+		</header>
+		<!-- // header -->
+		<!-- middle -->
+		<section class="middle_zone">
+			<div class="middle_title_row">
+				<p class="middle_title">검색</p>
+			</div>
+			<div class="middle_search_field_row">
+				<div class="search_field_wrap">
+					<div class="search_field_cols define_local">
+						<a href="#" class="search_field_form">
+							<div class="search_form_label">지역</div>
+							<div class="search_form_text_g">
+								<div class="search_form_text_place">어디로 가세요?</div>
+								<div class="search_form_text_result"></div>
+							</div>
+						</a>
+					</div>
+					<div class="search_field_cols define_theme">
+						<a href="#" class="search_field_form">
+							<div class="search_form_label">테마</div>
+							<div class="search_form_text_g">
+								<div class="search_form_text_place">취향에 맞는 상품을 원하세요?</div>
+								<div class="search_form_text_result"></div>
+							</div>
+						</a>
+					</div>
+					<div class="search_field_cols define_start">
+						<a href="#" class="search_field_form">
+							<div class="search_form_label">출발일</div>
+							<div class="search_form_text_g">
+								<input type="text" class="input_search_form" placeholder="날짜를 입력하세요">
+							</div>
+						</a>
+					</div>
+					<div class="search_field_cols define_search">
+						<div class="search_field_form">
+							<p class="search_form_label">검색어</p>
+							<input type="text" class="input_search_form" placeholder="검색어를 입력해주세요">
+						</div>
+					</div>
+					<div class="search_field_cols define_btn">
+						<a href="#" class="btn_search_form"><span class="hdtext">검색</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="middle_list_data_zone">
+				<div class="board_top_wrap">
+					<div class="board_top_cols">
+						<p class="bosrd_current_para">총 <strong>12</strong>개의 내역이 존재합니다</p>
+					</div>
+					<div class="board_top_cols">
+						<div class="boxquad_tab_list">
+							<a href="#" class="boxquad_tab active">추천상품순</a>
+							<a href="#" class="boxquad_tab">낮은가격순</a>
+							<a href="#" class="boxquad_tab">높은가격순</a>
+						</div>
+					</div>
+				</div>
+				<div class="board_list_wrap">
+					<ul class="board_thumnail_list">
+						<li class="nodata_li">
+							<p class="nodata_para">데이터가 없습니다.</p>
+						</li>
+					</ul>
+				</div>
+				<script>
+					const d_list_option = document.querySelectorAll(".d_list_option");
+					const d_fold_option = document.querySelectorAll(".d_fold_option");
+					d_list_option.forEach((element) => {
+						element.addEventListener("click", (e) => {
+							e.preventDefault();
+							let thisObj = e.currentTarget;
+							let thisObjParent = thisObj.closest(".board_thumnail_list > li");
+							let thisObjTarget = thisObjParent.querySelector(".list_option_zone");
+							thisObj.classList.toggle("type2");
+							thisObjTarget.classList.toggle("active");
+						}, false);
+					});
+					d_fold_option.forEach((element) => {
+						element.addEventListener("click", (e) => {
+							e.preventDefault();
+							let thisObj = e.currentTarget;
+							let thisObjParent = thisObj.closest(".board_thumnail_list > li");
+							let thisObjTarget = thisObjParent.querySelector(".list_option_zone");
+							let thisObjCall = thisObjParent.querySelector(".d_list_option");
+							thisObjCall.classList.remove("type2");
+							thisObjTarget.classList.remove("active");
+						}, false);
+					});
+				</script>
+				<!-- paging -->
+				<div class="pagination">
+					<a href="#none" class="control first"><span class="hdtext">처음 목록으로 이동</span></a>
+					<a href="#none" class="control prev"><span class="hdtext">이전 목록으로 이동</span></a>
+					<a href="#none" class="num on">1</a>
+					<a href="#none" class="num">2</a>
+					<a href="#none" class="num">3</a>
+					<a href="#none" class="num">4</a>
+					<a href="#none" class="num">5</a>
+					<a href="#none" class="num">6</a>
+					<a href="#none" class="num">7</a>
+					<a href="#none" class="num">8</a>
+					<a href="#none" class="num">9</a>
+					<a href="#none" class="num">10</a>
+					<a href="#none" class="control next"><span class="hdtext">다음 목록으로 이동</span></a>
+					<a href="#none" class="control last last_focus"><span class="hdtext">마지막 목록으로 이동</span></a>
+				</div>
+				<!-- // paging -->
+			</div>
+		</section>
+		<!-- // middle -->
+		<!-- footer -->
+		<footer class="footer_zone">
+			<div class="footer_main_low">
+				<div class="layout_pixin">
+					<div class="footer_botlogo"><img src="./images/common/bottom_logo.png" alt="oji TOUR"></div>
+					<div class="footer_botspec">
+						<ul class="footer_menu_list">
+							<li><a href="#" class="footer_menu">회사소개</a></li>
+							<li><a href="#" class="footer_menu">개인정보취급방침</a></li>
+							<li><a href="#" class="footer_menu">이용약관</a></li>
+							<li><a href="#" class="footer_menu">해외여행약관</a></li>
+						</ul>
+						<div class="footer_copyitem_list_wrap">
+							<ul class="footer_copyitem_list">
+								<li><span class="footer_copyitem">주식회사 오지투어</span></li>
+								<li><span class="footer_copyitem">대표 : 오상훈</span></li>
+								<li><span class="footer_copyitem">주소 : 서울특별시 강서구 양천로 583, A동 1504호(염창동, 우림블루나인)</span></li>
+								<li><span class="footer_copyitem">전화 : 02)737-9808</span></li>
+								<li><span class="footer_copyitem">팩스 : 02)6013-9808</span></li>
+								<li><span class="footer_copyitem">이메일 : ojitravel@gmail.com</span></li>
+								<li><span class="footer_copyitem">이메일주소 무단수집 거부</span></li>
+								<li><span class="footer_copyitem">사업자등록번호 : 580-88-01143</span></li>
+								<li><span class="footer_copyitem">관광사업자등록증 : 제2020-000031호</span></li>
+								<li><span class="footer_copyitem">통신판매업신고번호 : 제2020-서울강서-3592호</span></li>
+								<li><span class="footer_copyitem">당사는 국외여행 영업보증보험 3천만원, 국외 기획여행 보증보험 2억원, 여행자보험 2억원에 가입되어 있습니다.</span></li>
+								<li><span class="footer_copyitem">개인정보관리책임자 : 이선미</span></li>
+							</ul>
+						</div>
+						<p class="footer_copyright">Copyright ⓒojitour 2011. All rights reserved.</p>
+					</div>
+				</div>
+			</div>
+			<div class="btn_gotop_row type2">
+				<a href="#" class="btn_gotop"><span class="hdtext">페이지 위로</span></a>
+			</div>
+		</footer>
+		<!-- // footer -->
+	</div>
+</body>
+
+</html>
