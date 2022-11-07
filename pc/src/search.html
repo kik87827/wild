@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+
+<body class="front_body">
+	<div class="page_wrap">
+		@@include('./include/header.html')
+		<!-- middle -->
+		<section class="middle_zone">
+			<div class="middle_pixin">
+				<div class="middle_title_row"><p class="middle_title">검색</p></div>
+				<div class="middle_search_field_row">
+					<div class="search_field_wrap">
+						<a href="#" class="search_field_cols define_local" id="local_target" data-poslayer="#layer_box_01">
+							<div class="search_field_form">
+								<div class="search_form_label">지역</div>
+								<div class="search_form_text_g">
+									<div class="search_form_text_place">어디로 가세요?</div>
+									<div class="search_form_text_result"></div>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="search_field_cols define_theme" id="theme_target" data-poslayer="#layer_box_02">
+							<div class="search_field_form">
+								<div class="search_form_label">테마</div>
+								<div class="search_form_text_g">
+									<div class="search_form_text_place">취향에 맞는 상품을 원하세요?</div>
+									<div class="search_form_text_result"></div>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="search_field_cols define_start" id="start_target" data-poslayer="#layer_box_03">
+							<div class="search_field_form">
+								<div class="search_form_label">출발일</div>
+								<div class="search_form_text_g">
+									<div class="search_form_text_place">날짜를 입력하세요</div>
+									<div class="search_form_text_result"></div>
+								</div>
+							</div>
+						</a>
+						<div class="search_field_cols define_search">
+							<div class="search_field_form">
+								<p class="search_form_label">검색어</p>
+								<div class="search_form_text_g">
+									<input type="text" class="input_search_form" placeholder="검색어를 입력해주세요">
+								</div>
+							</div>
+						</div>
+						<div class="search_field_cols define_btn">
+							<a href="#" class="btn_search_form"><span class="hdtext">검색</span></a>
+						</div>
+					</div>
+				</div>
+				<script>
+					$(function(){
+						var start_date_div = $("#start_date_div");
+						var date_div_parent = start_date_div.parents(".poslayer_z"); 
+						// 픽업 레이어 달력
+						start_date_div.datepicker({
+							beforeShow: function () {
+								start_date_div.find(".ui-datepicker-next , .ui-datepicker-prev").addClass("layer_in_control");
+								parentDateUpdate();
+							},
+							onSelect: function () {
+								start_date_div.find(".ui-datepicker-next , .ui-datepicker-prev").addClass("layer_in_control");
+								parentDateUpdate();
+							},
+							onChangeMonthYear: function () {
+								start_date_div.find(".ui-datepicker-next , .ui-datepicker-prev").addClass("layer_in_control");
+								parentDateUpdate();
+							}
+						});
+						start_date_div.find(".ui-datepicker-next , .ui-datepicker-prev").addClass("layer_in_control");
+						parentDateUpdate();
+						
+	
+						function parentDateUpdate(){
+							var getDate = start_date_div.datepicker("getDate");
+							var monthText = String(getDate.getMonth()).length == 1 ? `0${getDate.getMonth()}` : getDate.getMonth();
+							var dateText = String(getDate.getDate()).length == 1 ? `0${getDate.getDate()}` : getDate.getDate();
+							date_div_parent.attr("data-date",getDate.getFullYear()+"-"+monthText+"-"+dateText)
+						}
+					})
+				</script>
+				<div class="middle_list_data_zone">
+					<div class="board_top_wrap">
+						<div class="board_top_cols">
+							<p class="bosrd_current_para">총 <strong>12</strong>개의 내역이 존재합니다</p>
+						</div>
+						<div class="board_top_cols">
+							<div class="boxquad_tab_list">
+								<a href="#" class="boxquad_tab active">추천상품순</a>
+								<a href="#" class="boxquad_tab">낮은가격순</a>
+								<a href="#" class="boxquad_tab">높은가격순</a>
+							</div>
+						</div>
+					</div>
+					<div class="board_list_wrap">
+						<ul class="board_thumnail_list">
+							<li>
+								<div class="board_thumnail_obj">
+									<a href="#" class="board_thumnail_img_cols">
+										<img src="./images/sub/temp_350x220.png" alt="">
+										<span class="thum_layer">
+											<span clas="thum_label">아프리카<strong>27</strong>days</span>
+										</span>
+									</a>
+									<div class="board_thumnail_spec_cols">
+										<a href="#" class="board_spectext_group">
+											<div class="board_spec_title">[스마트패키지] "라틴의 꿈!" 파타고니아+남미5개국 26일 _ 엘 찰텐,비냐델마르 숙박</div>
+											<div class="board_spec_sub_g">
+												<span class="board_spec_price">
+													<span class="price_num">13,399,000</span><span class="unit">원 ~</span>
+												</span>
+											</div>
+										</a>
+										<div class="board_other_group">
+											<div class="board_other_cols">
+												<div class="board_summary_tb">
+													<div class="board_summary_tr">
+														<div class="board_summary_cell deinfe_th"><span class="board_summary_label">여행기간</span></div>
+														<div class="board_summary_cell deinfe_td"><p class="board_summary_data">37박38일</p></div>
+													</div>
+													<div class="board_summary_tr">
+														<div class="board_summary_cell deinfe_th"><span class="board_summary_label">출발기간</span></div>
+														<div class="board_summary_cell deinfe_td"><p class="board_summary_data">2022년  10월1일  ~ 2022년 11월 8일</p></div>
+													</div>
+													<div class="board_summary_tr">
+														<div class="board_summary_cell deinfe_th"><span class="board_summary_label">여행지역</span></div>
+														<div class="board_summary_cell deinfe_td"><p class="board_summary_data">페루/볼리비아/칠레/아르헨티나/브라질</p></div>
+													</div>
+												</div>
+											</div>
+											<div class="board_other_cols">
+												<a href="#" class="btn_togglebox d_list_option"><span class="btn_togglebox_in">출발일 보기</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								@@include('./include/list_option_zone.html')
+							</li>
+							<li>
+								<div class="board_thumnail_obj">
+									<a href="#" class="board_thumnail_img_cols">
+										<img src="./images/sub/temp_350x220_02.jpg" alt="">
+										<span class="thum_layer">
+											<span clas="thum_label">남미<strong>27</strong>days</span>
+										</span>
+									</a>
+									<div class="board_thumnail_spec_cols">
+										<a href="#" class="board_spectext_group">
+											<div class="board_spec_title">[세미프리] 아모르파티 ! 사랑에 빠진 남미여행 세미 30일 (국내선 8회 또는 9회) - 환율 1250원 기준</div>
+											<div class="board_spec_sub_g">
+												<span class="board_spec_price">
+													<span class="price_num">3,390,000</span><span class="unit">원 ~</span>
+												</span>
+											</div>
+										</a>
+										<div class="board_other_group">
+											<div class="board_other_cols">
+												<div class="board_summary_tb">
+													<div class="board_summary_tr">
+														<div class="board_summary_cell deinfe_th"><span class="board_summary_label">여행기간</span></div>
+														<div class="board_summary_cell deinfe_td"><p class="board_summary_data">37박38일</p></div>
+													</div>
+													<div class="board_summary_tr">
+														<div class="board_summary_cell deinfe_th"><span class="board_summary_label">출발기간</span></div>
+														<div class="board_summary_cell deinfe_td"><p class="board_summary_data">2022년  10월1일  ~ 2022년 11월 8일</p></div>
+													</div>
+													<div class="board_summary_tr">
+														<div class="board_summary_cell deinfe_th"><span class="board_summary_label">여행지역</span></div>
+														<div class="board_summary_cell deinfe_td"><p class="board_summary_data">페루/볼리비아/칠레/아르헨티나/브라질</p></div>
+													</div>
+												</div>
+											</div>
+											<div class="board_other_cols">
+												<a href="#" class="btn_togglebox d_list_option"><span class="btn_togglebox_in">출발일 보기</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								@@include('./include/list_option_zone.html')
+							</li>
+							<li>
+								<div class="board_thumnail_obj">
+									<a href="#" class="board_thumnail_img_cols">
+										<img src="./images/sub/temp_350x220_02.jpg" alt="">
+										<span class="thum_layer">
+											<span clas="thum_label">중미<strong>27</strong>days</span>
+										</span>
+									</a>
+									<div class="board_thumnail_spec_cols">
+										<a href="#" class="board_spectext_group">
+											<div class="board_spec_title">[세미프리] 아모르파티 ! 사랑에 빠진 남미여행 세미 30일 (국내선 8회 또는 9회) - 환율 1250원 기준</div>
+											<div class="board_spec_sub_g">
+												<span class="board_spec_price">
+													<span class="price_num">3,390,000</span><span class="unit">원 ~</span>
+												</span>
+											</div>
+										</a>
+										<div class="board_other_group">
+											<div class="board_other_cols">
+												<div class="board_summary_tb">
+													<div class="board_summary_tr">
+														<div class="board_summary_cell deinfe_th"><span class="board_summary_label">여행기간</span></div>
+														<div class="board_summary_cell deinfe_td"><p class="board_summary_data">37박38일</p></div>
+													</div>
+													<div class="board_summary_tr">
+														<div class="board_summary_cell deinfe_th"><span class="board_summary_label">출발기간</span></div>
+														<div class="board_summary_cell deinfe_td"><p class="board_summary_data">2022년  10월1일  ~ 2022년 11월 8일</p></div>
+													</div>
+													<div class="board_summary_tr">
+														<div class="board_summary_cell deinfe_th"><span class="board_summary_label">여행지역</span></div>
+														<div class="board_summary_cell deinfe_td"><p class="board_summary_data">페루/볼리비아/칠레/아르헨티나/브라질</p></div>
+													</div>
+												</div>
+											</div>
+											<div class="board_other_cols">
+												<a href="#" class="btn_togglebox d_list_option"><span class="btn_togglebox_in">출발일 보기</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								@@include('./include/list_option_zone.html')
+							</li>
+							<li class="nodata_li">
+								<p class="nodata_para">데이터가 없습니다.</p>
+							</li>
+						</ul>
+					</div>
+					<script>
+						const d_list_option = document.querySelectorAll(".d_list_option");
+						const d_fold_option = document.querySelectorAll(".d_fold_option");
+						d_list_option.forEach((element)=>{
+							element.addEventListener("click", (e)=> {
+								e.preventDefault();
+								let thisObj = e.currentTarget;
+								let thisObjParent = thisObj.closest(".board_thumnail_list > li");
+								let thisObjTarget = thisObjParent.querySelector(".list_option_zone");
+								thisObj.classList.toggle("type2");
+								thisObjTarget.classList.toggle("active");
+							},false);
+						});
+						d_fold_option.forEach((element) => {
+							element.addEventListener("click", (e)=> {
+								e.preventDefault();
+								let thisObj = e.currentTarget;
+								let thisObjParent = thisObj.closest(".board_thumnail_list > li");
+								let thisObjTarget = thisObjParent.querySelector(".list_option_zone");
+								let thisObjCall = thisObjParent.querySelector(".d_list_option");
+								thisObjCall.classList.remove("type2");
+								thisObjTarget.classList.remove("active");
+							},false);
+						});
+					</script>
+					<!-- paging -->
+					<div class="pagination">
+						<a href="#none" class="control first"><span class="hdtext">처음 목록으로 이동</span></a>
+						<a href="#none" class="control prev"><span class="hdtext">이전 목록으로 이동</span></a>
+						<a href="#none" class="num on">1</a>
+						<a href="#none" class="num">2</a>
+						<a href="#none" class="num">3</a>
+						<a href="#none" class="num">4</a>
+						<a href="#none" class="num">5</a>
+						<a href="#none" class="num">6</a>
+						<a href="#none" class="num">7</a>
+						<a href="#none" class="num">8</a>
+						<a href="#none" class="num">9</a>
+						<a href="#none" class="num">10</a>
+						<a href="#none" class="control next"><span class="hdtext">다음 목록으로 이동</span></a>
+						<a href="#none" class="control last last_focus"><span class="hdtext">마지막 목록으로 이동</span></a>
+					</div>
+					<!-- // paging -->
+				</div>
+			</div>
+		</section>
+		<!-- // middle -->
+		@@include('./include/footer_sub.html')
+		<!-- layer -->
+		<div class="poslayer_z" id="layer_box_01">
+            <div class="poslayer_titlow">
+                <p class="poslayer_tit">지역선택</p>
+            </div>
+            <div class="poslayer_contlow">
+                <div class="pcont_w">
+                    <div class="pclayer_scr_w">
+                        <ul class="pclayer_vlist">
+                            <li><a href="javascript:;" class="pcv_chk">남미</a></li>
+                            <li><a href="javascript:;" class="pcv_chk">중미</a></li>
+                            <li><a href="javascript:;" class="pcv_chk">아프리카</a></li>
+                            <li><a href="javascript:;" class="pcv_chk">유럽</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn_psubmit_w">
+                    <a href="#" class="btn_psubmit">적용</a>
+                </div>
+            </div>
+            <button type="button" class="layerclose"><span class="hdtext">닫기</span></button>
+        </div>
+
+		<div class="poslayer_z" id="layer_box_02">
+            <div class="poslayer_titlow">
+                <p class="poslayer_tit">테마선택</p>
+            </div>
+            <div class="poslayer_contlow">
+                <div class="pcont_w">
+                    <div class="pclayer_scr_w">
+                        <ul class="pclayer_vlist">
+                            <li><a href="#" class="pcv_chk">세미팩</a></li>
+                            <li><a href="#" class="pcv_chk">스마트패키지</a></li>
+                            <li><a href="#" class="pcv_chk">어드밴쳐</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn_psubmit_w">
+                    <a href="#" class="btn_psubmit">적용</a>
+                </div>
+            </div>
+            <button type="button" class="layerclose"><span class="hdtext">닫기</span></button>
+        </div>
+		
+		<div class="poslayer_z wtype2" id="layer_box_03">
+            <div class="poslayer_titlow">
+                <p class="poslayer_tit">출발일 선택</p>
+            </div>
+            <div class="poslayer_contlow">
+                <div class="pcont_w">
+                    <div class="insert_date_parent" id="start_date_div">
+
+					</div>
+                </div>
+                <div class="btn_psubmit_w">
+                    <a href="#" class="btn_psubmit">적용</a>
+                </div>
+            </div>
+            <button type="button" class="layerclose"><span class="hdtext">닫기</span></button>
+        </div>
+		<!-- // layer -->
+	</div>
+</body>
+</html>
