@@ -222,13 +222,13 @@ function posLayerPos(target,btn){
 	$target.css({"top":"", "left" : "" , "right" : "" , "width" : ""});
 	if ($targetWid + $btnPosLeft > $(window).width()){
 		$target.css({
-			"top": $btnPosTop + $btnPosHeight + 60,
+			"top": $btnPosTop + $btnPosHeight + 20,
 			"left": "auto",
 			"right" : 20
 		});
 	}else{
 		$target.css({
-			"top": $btnPosTop + $btnPosHeight + 60,
+			"top": $btnPosTop + $btnPosHeight + 20,
 			"left": $btnPosLeft
 		});
 	}
@@ -249,13 +249,13 @@ function posLayerResizeAction(target){
 	$target.css({"top":"", "left" : "" , "right" : "" , "width" : ""});
 	if ($targetWid + $btnPosLeft > $(window).width()) {
 		$target.css({
-			"top": $btnPosTop + $btnPosHeight + 60,
+			"top": $btnPosTop + $btnPosHeight + 20,
 			"left": "auto",
 			"right": 20
 		});
 	} else {
 		$target.css({
-			"top": $btnPosTop + $btnPosHeight + 60,
+			"top": $btnPosTop + $btnPosHeight + 20,
 			"left": $btnPosLeft
 		});
 	}
