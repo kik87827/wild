@@ -162,13 +162,13 @@ function posLayerEvent(){
 		let targetCols = $(`[data-poslayer='#${thisParent.attr("id")}']`);
 		let activeDate = thisParent.attr("data-date");
 		let activeText = thisParent.find(".pclayer_vlist > li.active").text();
-		targetCols.addClass("result_mode");
 		if(thisParent.attr("data-date") !== undefined){
 			targetCols.find(".search_form_text_result").html(activeDate);
+			targetCols.addClass("result_mode");
 		}else{
 			targetCols.find(".search_form_text_result").html(activeText);
+			targetCols.addClass("result_mode");
 		}
-		// targetCols.removeClass("result_mode");
 		posLayerHide(thisParent);
 	});
 
