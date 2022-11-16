@@ -142,6 +142,9 @@ html.smooth {scroll-behavior: smooth;}
 .footer_copyitem{display:inline-block;line-height:1.4;color:#4e4e4e;font-size:11px;}
 .footer_copyright{display:inline-block;line-height:1;color:#4e4e4e;font-size:11px;margin-top:20px;}
 
+.middle_title_row{text-align: center;margin-bottom:20px;}
+.middle_title{font-size:17px;color:#000000;line-height:1;display:inline-block;font-weight:400;}
+
 @media(max-width:359px){
     .botmenu_list > li{position:relative;padding:0 10px !important;}
     .botmenu_wrap{padding:20px 0;}
