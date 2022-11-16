@@ -289,7 +289,7 @@ li.nodata_li{padding:100px 20px;text-align: center;display:block !important;}
 .list_tbody,
 .list_thead{width:100%;box-sizing: border-box;}
 .list_table{border-collapse: separate;}
-.list_table th{padding:15px 5px 14px;background:#f4f5fc;border-bottom:1px solid #cacaca;text-align: center;}
+.list_table th{padding:15px 5px 14px;background:#eff6f9;border-bottom:1px solid #cacaca;text-align: center;}
 .list_table td{border-bottom:1px solid #cacaca;padding:16px 5px 15px;text-align: center;}
 .list_table td.align_type2{text-align: left;}
 .list_table .align_type3{text-align: center !important;}
