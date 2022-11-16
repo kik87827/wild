@@ -302,9 +302,9 @@ function mc_swiper_func(){
 function subEmpSwiper(){
 	let emp_swiper = document.querySelector(".emp_swiper");
 	let emp_swiper_slide = document.querySelectorAll(".emp_swiper .swiper-slide");
-
+	var emp_swiper_obj = null;
 	if(emp_swiper_slide.length>1){
-		main_visual_obj = new Swiper(".emp_swiper", {
+		emp_swiper_obj = new Swiper(".emp_swiper", {
 			speed : 1500,
 			slidesPerView: 4, 
 			slidesPerGroup: 4, 
