@@ -300,6 +300,10 @@ li.nodata_li{padding:100px 20px;text-align: center;display:block !important;}
 .list_table th.ptype2{padding:5px;}
 .list_thead th{padding:15px 5px 14px;}
 .list_thead th:last-of-type{}
+.list_table tr.type2 th{position:relative;}
+.list_table tr.type2 th:after{display:block;content:'';width:1px;height:16px;background:#cecece;position:absolute;top:50%;right:0;transform: translateY(-50%);}
+.list_table tr.type2 th:last-of-type{}
+.list_table tr.type2 th:last-of-type:after{display:none;}
 .thtext{display:inline-block;font-size:14px;color:#1b1b1b;line-height:1;font-weight:500;white-space: nowrap;}
 .thtext br{display:none;}
 .list_tbody_wrap{padding:0 18px;}
@@ -308,6 +312,9 @@ li.nodata_li{padding:100px 20px;text-align: center;display:block !important;}
 .list_table td.nodata_td{padding:100px 5px 98px;}
 .list_tbody td:last-of-type{}
 .list_table td.ptype2{padding:5px;}
+
+.list_table tr.has_long td{padding:16px 10px 15px;}
+
 .nodata_para,
 .tdtext{display:inline-block;font-size:14px;color:#2b2b2b;}
 .list_tdpara{display:inline-block;font-size:14px;color:#2b2b2b;}
