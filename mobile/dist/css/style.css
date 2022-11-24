@@ -313,7 +313,7 @@ li.nodata_li{padding:100px 20px;text-align: center;display:block !important;}
 .list_tbody td:last-of-type{}
 .list_table td.ptype2{padding:5px;}
 
-.list_table tr.has_long td{padding:16px 10px 15px;}
+.list_table tr.has_long td{padding:16px 10px 15px;background:#f9fdff;}
 
 .nodata_para,
 .tdtext{display:inline-block;font-size:14px;color:#2b2b2b;}

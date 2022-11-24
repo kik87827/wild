@@ -41,7 +41,7 @@ function commonInit() {
 function layoutFunc(){
     function flowNotice(){
 		let flow_notice_slide = document.querySelectorAll(".flow_container .swiper-slide");
-		let flow_notice_obj = null;
+		var flow_notice_obj = null;
 		if(flow_notice_slide.length>1){
 			flow_notice_obj = new Swiper(".flow_container", {
 				direction: "vertical",
