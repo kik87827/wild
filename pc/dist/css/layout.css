@@ -122,6 +122,7 @@ html.smooth {scroll-behavior: smooth;}
 .middle_search_field_row{margin-bottom:80px;}
 .middle_search_field_row .search_field_wrap{position:static;transform: none;}
 
+.middle_content_row{}
 
 .footer_main_low{background:#282828;}
 .layout_pixin{width:1200px;margin:0 auto;padding:40px 0;}
