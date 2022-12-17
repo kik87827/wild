@@ -340,3 +340,26 @@ function gnbTotalMenu(){
 		global_menu_layer.classList.toggle("active");
 	});
 }
+
+function maxHeightFunc(target){
+	let targetObj = target;
+	let targetArray = [];
+	let targetDom = targetObj !== undefined ? document.querySelectorAll(targetObj) : null;
+	
+	action();
+	window.addEventListener("resize",()=>{
+		action();
+	});
+
+	function action(){
+		if(targetDom.length){
+			targetDom.forEach((element)=>{
+				element.style.removeProperty("height");
+				targetArray.push(element.getBoundingClientRect().height);
+			});
+			targetDom.forEach((element)=>{
+				element.style.height = `${Math.max.apply(null,targetArray)}px`;
+			});
+		}
+	}
+}
